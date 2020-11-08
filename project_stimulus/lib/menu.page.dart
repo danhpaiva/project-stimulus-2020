@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
+import 'components/listCards.dart';
 
 class MenuPage extends StatefulWidget {
   @override
@@ -29,13 +29,7 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ],
         ),
-        body: Container(
-          child: Column(
-            children: [
-              Text('Teste'),
-            ],
-          ),
-        ),
+        body: ListCards(),
       ),
     );
   }
