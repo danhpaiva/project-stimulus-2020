@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -11,7 +10,7 @@ class _RodarYoutubeState extends State<RodarYoutube> {
   YoutubePlayerController _controller = YoutubePlayerController(
     initialVideoId: 'e--xnFnwPTU',
     flags: YoutubePlayerFlags(
-      autoPlay: true,
+      autoPlay: false,
       mute: false,
     ),
   );

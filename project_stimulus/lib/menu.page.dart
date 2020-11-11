@@ -29,7 +29,10 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ],
         ),
-        body: RodarYoutube(),
+        body: Container(
+          width: 50,
+          child: RodarYoutube(),
+        ),
       ),
     );
   }
