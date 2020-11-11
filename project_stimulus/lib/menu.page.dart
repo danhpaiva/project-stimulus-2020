@@ -45,48 +45,6 @@ class _MenuPageState extends State<MenuPage> {
                   'Acompanhe o seu caixa de perto',
                   'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
             ),
-            Text("COMO MANTENHO MINHAS CONTAS EM DIA?"),
-            Container(
-              child: RodarYoutube(
-                  'https://youtu.be/e--xnFnwPTU',
-                  'Acompanhe o seu caixa de perto',
-                  'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
-            ),
-            Text("COMO MANTENHO MINHAS CONTAS EM DIA?"),
-            Container(
-              child: RodarYoutube(
-                  'https://youtu.be/e--xnFnwPTU',
-                  'Acompanhe o seu caixa de perto',
-                  'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
-            ),
-            Text("COMO MANTENHO MINHAS CONTAS EM DIA?"),
-            Container(
-              child: RodarYoutube(
-                  'https://youtu.be/e--xnFnwPTU',
-                  'Acompanhe o seu caixa de perto',
-                  'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
-            ),
-            Text("COMO MANTENHO MINHAS CONTAS EM DIA?"),
-            Container(
-              child: RodarYoutube(
-                  'https://youtu.be/e--xnFnwPTU',
-                  'Acompanhe o seu caixa de perto',
-                  'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
-            ),
-            Text("COMO MANTENHO MINHAS CONTAS EM DIA?"),
-            Container(
-              child: RodarYoutube(
-                  'https://youtu.be/e--xnFnwPTU',
-                  'Acompanhe o seu caixa de perto',
-                  'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
-            ),
-            Text("COMO MANTENHO MINHAS CONTAS EM DIA?"),
-            Container(
-              child: RodarYoutube(
-                  'https://youtu.be/e--xnFnwPTU',
-                  'Acompanhe o seu caixa de perto',
-                  'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
-            ),
           ],
         ),
       ),
