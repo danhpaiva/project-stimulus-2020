@@ -17,7 +17,7 @@ class _MenuPageState extends State<MenuPage> {
       home: Scaffold(
         key: scaffoldKey,
         appBar: AppBar(
-          backgroundColor: Color(0xFF011126),
+          backgroundColor: Color(0xFF147c54),
           title: Text('MENU PRINCIPAL'),
           actions: <Widget>[
             IconButton(

@@ -68,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                         'LOGAR',
                         style: TextStyle(color: Colors.white),
                       ),
-                      color: Color(0xFF011126),
+                      color: Color(0xFF147c54),
                     ),
                   ),
                   Container(
@@ -82,7 +82,8 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: Text(
                         'CADASTRE-SE',
-                        style: TextStyle(fontSize: 16),
+                        style:
+                            TextStyle(fontSize: 16, color: Color(0xFF147c54)),
                       ),
                     ),
                   )

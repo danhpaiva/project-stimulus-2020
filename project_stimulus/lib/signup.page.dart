@@ -80,7 +80,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       MaterialPageRoute(builder: (context) => MenuPage()));
                 },
                 child: Text('CADASTRAR', style: TextStyle(color: Colors.white)),
-                color: Color(0xFF011126),
+                color: Color(0xFF147c54),
               ),
             ),
             Container(
@@ -94,7 +94,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 },
                 child: Text(
                   'Entrar',
-                  style: TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: 16, color: Color(0xFF147c54)),
                 ),
               ),
             )

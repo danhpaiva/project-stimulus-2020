@@ -21,10 +21,11 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Container(
-                margin: const EdgeInsets.only(top: 10),
+                width: 300.0,
+                margin: const EdgeInsets.only(top: 160),
                 child: Image.asset('assets/logo.png')),
             Container(
-              margin: const EdgeInsets.only(bottom: 100, top: 70),
+              margin: const EdgeInsets.only(top: 140),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
@@ -44,7 +45,7 @@ class _HomePageState extends State<HomePage> {
                         child: Text('ENTRAR',
                             style:
                                 TextStyle(color: Colors.white, fontSize: 20)),
-                        color: Color(0xFF011126),
+                        color: Color(0xFF147c54), //#147c54
                       )),
                   Container(
                       width: 150.0,
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                       child: FlatButton(
                         shape: new RoundedRectangleBorder(
                             side: BorderSide(
-                              color: Color(0xFF011126),
+                              color: Color(0xFF147c54),
                               width: 2,
                               style: BorderStyle.solid,
                             ),
@@ -66,14 +67,14 @@ class _HomePageState extends State<HomePage> {
                         },
                         child: Text('CADASTRAR',
                             style: TextStyle(
-                                color: Color(0xFF011126), fontSize: 20)),
+                                color: Color(0xFF147c54), fontSize: 20)),
                       )),
                 ],
               ),
             ),
             Container(
                 margin:
-                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 100),
+                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 200),
                 child: Image.asset(
                   'assets/logo-estimulo.png',
                   width: 200,
