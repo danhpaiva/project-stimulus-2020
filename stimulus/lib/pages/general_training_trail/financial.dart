@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import '../components/youtube-player.dart';
+import '../../components/youtube-player.dart';
 
 class MenuPage extends StatefulWidget {
   @override
