@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'signup.page.dart';
-import 'login.page.dart';
+import 'signup_page.dart';
+import 'login_page.dart';
 
 void main() {
   runApp(MaterialApp(home: HomePage()));

@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'login.page.dart';
-import 'menu.page.dart';
+import 'login_page.dart';
+import 'menu_page.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
