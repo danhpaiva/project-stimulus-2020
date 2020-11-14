@@ -52,16 +52,24 @@ class RodarYoutubeState extends State<RodarYoutube> {
                     padding: EdgeInsets.all(10),
                     child: Column(
                       children: <Widget>[
-                        Text(
-                          widget.title.toUpperCase(),
-                          style: TextStyle(
-                              fontFamily: 'TT NORMS',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w100),
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Text(
+                            widget.title.toUpperCase(),
+                            style: TextStyle(
+                                fontFamily: 'TT NORMS',
+                                fontSize: 20,
+                                fontWeight: FontWeight.w400),
+                                textAlign: TextAlign.center,
+                          ),
                         ),
-                        Text(
-                          widget.des,
-                          style: TextStyle(),
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Text(
+                            widget.des,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(),
+                          ),
                         )
                       ],
                     ),

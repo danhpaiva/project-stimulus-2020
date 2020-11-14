@@ -29,23 +29,55 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ],
         ),
-        body: Column(
-          children: [
-            Text("COMO MANTENHO MINHAS CONTAS EM DIA?"),
-            Container(
-              child: RodarYoutube(
-                  'https://youtu.be/e--xnFnwPTU',
-                  'Acompanhe o seu caixa de perto',
-                  'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
-            ),
-            Text("COMO MANTENHO MINHAS CONTAS EM DIA?"),
-            Container(
-              child: RodarYoutube(
-                  'https://youtu.be/e--xnFnwPTU',
-                  'Acompanhe o seu caixa de perto',
-                  'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
-            ),
-          ],
+        body: Container(
+          child: ListView(
+            children: <Widget>[
+              Column(
+                children: [
+                  Container(
+                    color: Color(0xFF147c54),
+                    width: double.infinity,
+                    margin: EdgeInsets.only(top: 20, bottom: 5),
+                    padding: EdgeInsets.all(10),
+                    child: Center(
+                      child: Text(
+                        'Como mantenho minhas contas em dia?',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Card(
+                    margin: EdgeInsets.all(10),
+                    child: Container(
+                      child: RodarYoutube(
+                          'https://youtu.be/e--xnFnwPTU',
+                          'Acompanhe o seu caixa de perto',
+                          'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
+                    ),
+                  ),
+                  Card(
+                    margin: EdgeInsets.all(10),
+                    child: Container(
+                      child: RodarYoutube(
+                          'https://youtu.be/U2Dkxj2hMAM',
+                          'Planeje suas receitas e despesas dos próximos meses',
+                          'Cinco grandes dicas que te ajudarão na administração financeira do seu negócio nesse período.'),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                child: RodarYoutube(
+                    'https://youtu.be/e--xnFnwPTU',
+                    'Acompanhe o seu caixa de perto',
+                    'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
+              ),
+            ],
+          ),
         ),
       ),
     );
