@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'components/youtube.player.dart';
 
 class MenuPage extends StatefulWidget {
   @override
@@ -50,32 +49,8 @@ class _MenuPageState extends State<MenuPage> {
                       ),
                     ),
                   ),
-                  Card(
-                    margin: EdgeInsets.all(10),
-                    child: Container(
-                      child: RodarYoutube(
-                          'https://youtu.be/e--xnFnwPTU',
-                          'Acompanhe o seu caixa de perto',
-                          'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
-                    ),
-                  ),
-                  Card(
-                    margin: EdgeInsets.all(10),
-                    child: Container(
-                      child: RodarYoutube(
-                          'https://youtu.be/U2Dkxj2hMAM',
-                          'Planeje suas receitas e despesas dos próximos meses',
-                          'Cinco grandes dicas que te ajudarão na administração financeira do seu negócio nesse período.'),
-                    ),
-                  ),
                 ],
-              ),
-              Container(
-                child: RodarYoutube(
-                    'https://youtu.be/e--xnFnwPTU',
-                    'Acompanhe o seu caixa de perto',
-                    'É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.'),
-              ),
+              )
             ],
           ),
         ),

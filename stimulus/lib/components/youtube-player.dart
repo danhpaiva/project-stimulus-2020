@@ -60,7 +60,7 @@ class RodarYoutubeState extends State<RodarYoutube> {
                                 fontFamily: 'TT NORMS',
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400),
-                                textAlign: TextAlign.center,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         Padding(
