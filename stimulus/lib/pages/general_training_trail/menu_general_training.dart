@@ -44,6 +44,7 @@ class _MenuGeneralState extends State<MenuGeneral> {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(top: 15),
               padding: EdgeInsets.all(6),
               child: GestureDetector(
                 onTap: () => {
@@ -84,6 +85,7 @@ class _MenuGeneralState extends State<MenuGeneral> {
                           ),
                         ),
                         Container(
+                          margin: EdgeInsets.only(left: 15),
                           width: 125,
                           child: Image.asset('assets/imagem-financeiro-01.png'),
                         ),
@@ -126,6 +128,7 @@ class _MenuGeneralState extends State<MenuGeneral> {
                           ),
                         ),
                         Container(
+                          margin: EdgeInsets.only(left: 15),
                           width: 125,
                           child: Image.asset('assets/imagem-comunicao-02.png'),
                         ),
@@ -168,6 +171,7 @@ class _MenuGeneralState extends State<MenuGeneral> {
                           ),
                         ),
                         Container(
+                          margin: EdgeInsets.only(left: 15),
                           width: 125,
                           child: Image.asset('assets/imagem-tecnologia-03.png'),
                         ),
@@ -210,6 +214,7 @@ class _MenuGeneralState extends State<MenuGeneral> {
                           ),
                         ),
                         Container(
+                          margin: EdgeInsets.only(left: 15),
                           width: 125,
                           child: Image.asset('assets/imagem-gestaoRH-04.png'),
                         ),
