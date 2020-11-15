@@ -14,28 +14,35 @@ class _LoginPageState extends State<LoginPage> {
     return MaterialApp(
       home: Material(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
-                child: Image.asset(
-              'assets/logo.png',
-              width: 250,
-            )),
+              margin: EdgeInsets.only(top: 150),
+              child: Image.asset(
+                'assets/logo.png',
+                width: 250,
+              ),
+            ),
             Container(
               padding: EdgeInsets.only(left: 25, right: 25),
               child: Column(
                 children: [
                   Text(
                     'Bem vindo',
-                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.w500),
+                    style: TextStyle(fontSize: 35, fontWeight: FontWeight.w500),
                   ),
-                  Text(
+                  Center(
+                    child: Text(
                       'ao lugar onde você encontra as oportunidades para mudar o futuro da sua empresa e do seu negócio',
-                      style: TextStyle(fontSize: 18))
+                      style: TextStyle(fontSize: 18),
+                      textAlign: TextAlign.center,
+                    ),
+                  )
                 ],
               ),
             ),
             Container(
+              margin: EdgeInsets.only(bottom: 35),
               child: Column(
                 children: [
                   Container(
@@ -43,20 +50,26 @@ class _LoginPageState extends State<LoginPage> {
                     width: 350,
                     child: TextField(
                       decoration: InputDecoration(
-                          labelText: 'Digite seu email',
-                          labelStyle: TextStyle(fontSize: 20)),
+                        labelText: '  Digite seu email',
+                        labelStyle: TextStyle(fontSize: 20),
+                      ),
                     ),
                   ),
                   Container(
                     color: Color(0XFFd3d3d3),
+                    margin: EdgeInsets.only(top: 10),
                     width: 350,
                     child: TextField(
+                      obscureText: true,
                       decoration: InputDecoration(
-                          labelText: 'Digite sua senha',
-                          labelStyle: TextStyle(fontSize: 20)),
+                        labelText: '  Digite sua senha',
+                        labelStyle: TextStyle(fontSize: 20),
+                      ),
                     ),
                   ),
                   Container(
+                    width: 120,
+                    margin: EdgeInsets.only(top: 15),
                     child: RaisedButton(
                       onPressed: () {
                         Navigator.push(
@@ -66,28 +79,28 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: Text(
                         'LOGAR',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                       color: Color(0xFF147c54),
                     ),
                   ),
-                  Container(
-                    alignment: Alignment.bottomRight,
-                    child: FlatButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SignUpPage()),
-                        );
-                      },
-                      child: Text(
-                        'CADASTRE-SE',
-                        style:
-                            TextStyle(fontSize: 16, color: Color(0xFF147c54)),
-                      ),
-                    ),
-                  )
                 ],
+              ),
+            ),
+            Container(
+              alignment: Alignment.bottomRight,
+              margin: EdgeInsets.only(top: 20),
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUpPage()),
+                  );
+                },
+                child: Text(
+                  'CADASTRE-SE',
+                  style: TextStyle(fontSize: 16, color: Color(0xFF147c54)),
+                ),
               ),
             )
           ],

@@ -15,14 +15,14 @@ class _SignUpPageState extends State<SignUpPage> {
     return MaterialApp(
       home: Material(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
-                //margin: const EdgeInsets.only(bottom: ),
+                margin: EdgeInsets.only(top: 100),
                 child: Image.asset(
-              'assets/logo.png',
-              width: 250,
-            )),
+                  'assets/logo.png',
+                  width: 250,
+                )),
             Container(
               padding: EdgeInsets.only(left: 25, right: 25),
               child: Column(
@@ -30,10 +30,13 @@ class _SignUpPageState extends State<SignUpPage> {
                   Text(
                     'Parabéns, sua empresa teve o crédito aprovado!',
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+                    textAlign: TextAlign.center,
                   ),
                   Text(
-                      'Faça seu cadastro e encontre as oportunidades que você precisa para crescer!',
-                      style: TextStyle(fontSize: 18))
+                    'Faça seu cadastro e encontre as oportunidades que você precisa para crescer!',
+                    style: TextStyle(fontSize: 18),
+                    textAlign: TextAlign.center,
+                  ),
                 ],
               ),
             ),
@@ -41,12 +44,23 @@ class _SignUpPageState extends State<SignUpPage> {
               child: Column(
                 children: [
                   Container(
+                    margin: EdgeInsets.only(bottom: 10),
                     color: Color(0XFFd3d3d3),
                     width: 350,
                     child: TextField(
                       decoration: InputDecoration(
-                          hintText: 'Digite o nome da sua Empresa',
-                          labelText: 'Nome da Empresa',
+                        labelText: '  Digite o nome da sua Empresa',
+                        labelStyle: TextStyle(fontSize: 16),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 10),
+                    color: Color(0XFFd3d3d3),
+                    width: 350,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          labelText: '  Digite seu email',
                           labelStyle: TextStyle(fontSize: 16)),
                     ),
                   ),
@@ -55,18 +69,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     width: 350,
                     child: TextField(
                       decoration: InputDecoration(
-                          hintText: 'Digite seu nome',
-                          labelText: 'Email',
-                          labelStyle: TextStyle(fontSize: 16)),
-                    ),
-                  ),
-                  Container(
-                    color: Color(0XFFd3d3d3),
-                    width: 350,
-                    child: TextField(
-                      decoration: InputDecoration(
-                          hintText: 'Digite seu senha',
-                          labelText: 'Senha',
+                          labelText: '  Digite sua senha',
                           labelStyle: TextStyle(fontSize: 16)),
                     ),
                   ),
@@ -74,12 +77,16 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
             ),
             Container(
+              width: 150,
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => MenuPage()));
                 },
-                child: Text('CADASTRAR', style: TextStyle(color: Colors.white)),
+                child: Text(
+                  'CADASTRAR',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
                 color: Color(0xFF147c54),
               ),
             ),
@@ -93,7 +100,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   );
                 },
                 child: Text(
-                  'Entrar',
+                  'ENTRAR',
                   style: TextStyle(fontSize: 16, color: Color(0xFF147c54)),
                 ),
               ),

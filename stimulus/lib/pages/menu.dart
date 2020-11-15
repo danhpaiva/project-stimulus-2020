@@ -34,65 +34,151 @@ class _MenuPageState extends State<MenuPage> {
               Column(
                 children: [
                   Container(
-                    color: Color(0xFF147c54),
-                    width: double.infinity,
+                    width: 300,
                     margin: EdgeInsets.only(top: 20, bottom: 5),
-                    padding: EdgeInsets.all(10),
-                    child: Center(
-                      child: Text(
-                        'Como mantenho minhas contas em dia?',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
+                    child: Text(
+                      'Adquira conhecimento a partir dos nossos cursos',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 25,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 130,
+                    width: 380,
+                    margin: EdgeInsets.all(5),
+                    child: Card(
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        child: Row(
+                          children: [
+                            Container(
+                              child: Image.asset('assets/imagem_trilha_01.png'),
+                            ),
+                            Column(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 20),
+                                  width: 180,
+                                  child: Text(
+                                    'Capacitação Geral',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 20),
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: 3),
+                                  width: 180,
+                                  child: Text(
+                                    'Faça cursos para ampliar seus conhecimentos.',
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ),
                   ),
                   Container(
-                    color: Color(0xFF147c54),
-                    width: double.infinity,
+                    width: 300,
                     margin: EdgeInsets.only(top: 20, bottom: 5),
-                    padding: EdgeInsets.all(10),
-                    child: Center(
-                      child: Text(
-                        'COMO VENDER DURANTE A PANDEMIA?',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
+                    child: Text(
+                      'Desenvolva novas percepções com seu mentor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 25,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 130,
+                    width: 380,
+                    margin: EdgeInsets.all(5),
+                    child: Card(
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        child: Row(
+                          children: [
+                            Container(
+                              child: Image.asset('assets/imagem-trilha-02.png'),
+                            ),
+                            Column(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 20),
+                                  width: 180,
+                                  child: Text(
+                                    'Mentoria específica',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 20),
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: 3),
+                                  width: 180,
+                                  child: Text(
+                                    'Receba a mentoria de um empresário parceiro.',
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ),
                   ),
                   Container(
-                    color: Color(0xFF147c54),
-                    width: double.infinity,
+                    width: 300,
                     margin: EdgeInsets.only(top: 20, bottom: 5),
-                    padding: EdgeInsets.all(10),
-                    child: Center(
-                      child: Text(
-                        'COMO ORGANIZAR MINHAS DESPESAS?',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                        ),
+                    child: Text(
+                      'Relate seus resultados ',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 25,
                       ),
                     ),
                   ),
                   Container(
-                    color: Color(0xFF147c54),
-                    width: double.infinity,
-                    margin: EdgeInsets.only(top: 20, bottom: 5),
-                    padding: EdgeInsets.all(10),
-                    child: Center(
-                      child: Text(
-                        'COMO AS MEDIDAS DO GOVERNO PODEM AJUDAR O MEU NEGÓCIO?',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
+                    height: 130,
+                    width: 380,
+                    margin: EdgeInsets.all(5),
+                    child: Card(
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        child: Row(
+                          children: [
+                            Container(
+                              child: Image.asset('assets/imagem-trilha-03.png'),
+                            ),
+                            Column(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 20),
+                                  width: 180,
+                                  child: Text(
+                                    'Sua experiência',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 20),
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: 3),
+                                  width: 180,
+                                  child: Text(
+                                    'Avalie a eficácia do programa em seu negócio.',
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ),
