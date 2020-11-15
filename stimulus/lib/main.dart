@@ -73,12 +73,12 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
-                margin:
-                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 200),
-                child: Image.asset(
-                  'assets/logo-estimulo.png',
-                  width: 200,
-                )),
+              margin: const EdgeInsets.only(left: 20.0, right: 20.0, top: 200),
+              child: Image.asset(
+                'assets/logo-estimulo.png',
+                width: 200,
+              ),
+            ),
           ],
         ),
       ),

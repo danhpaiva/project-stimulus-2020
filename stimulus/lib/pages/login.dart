@@ -74,7 +74,9 @@ class _LoginPageState extends State<LoginPage> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => MenuPage()),
+                          MaterialPageRoute(
+                            builder: (context) => MenuPage(),
+                          ),
                         );
                       },
                       child: Text(
@@ -94,12 +96,17 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignUpPage()),
+                    MaterialPageRoute(
+                      builder: (context) => SignUpPage(),
+                    ),
                   );
                 },
                 child: Text(
                   'CADASTRE-SE',
-                  style: TextStyle(fontSize: 16, color: Color(0xFF147c54)),
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF147c54),
+                  ),
                 ),
               ),
             )

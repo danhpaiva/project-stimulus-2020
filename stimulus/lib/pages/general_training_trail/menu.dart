@@ -7,7 +7,9 @@ class MenuPage extends StatefulWidget {
 }
 
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-final SnackBar snackBar = const SnackBar(content: Text('Showing Snackbar'));
+final SnackBar snackBar = const SnackBar(
+  content: Text('Showing Snackbar'),
+);
 
 class _MenuPageState extends State<MenuPage> {
   @override

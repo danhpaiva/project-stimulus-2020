@@ -80,8 +80,12 @@ class _SignUpPageState extends State<SignUpPage> {
               width: 150,
               child: RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MenuPage()));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MenuPage(),
+                    ),
+                  );
                 },
                 child: Text(
                   'CADASTRAR',
@@ -96,7 +100,9 @@ class _SignUpPageState extends State<SignUpPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    MaterialPageRoute(
+                      builder: (context) => LoginPage(),
+                    ),
                   );
                 },
                 child: Text(

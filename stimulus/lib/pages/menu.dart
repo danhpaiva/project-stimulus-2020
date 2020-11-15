@@ -35,9 +35,9 @@ class _MenuPageState extends State<MenuPage> {
                 children: [
                   Container(
                     width: 300,
-                    margin: EdgeInsets.only(top: 20, bottom: 5),
+                    margin: EdgeInsets.only(top: 40),
                     child: Text(
-                      'Adquira conhecimento a partir dos nossos cursos',
+                      'Adquira conhecimento',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 25,
@@ -85,9 +85,9 @@ class _MenuPageState extends State<MenuPage> {
                   ),
                   Container(
                     width: 300,
-                    margin: EdgeInsets.only(top: 20, bottom: 5),
+                    margin: EdgeInsets.only(top: 40),
                     child: Text(
-                      'Desenvolva novas percepções com seu mentor',
+                      'Desenvolva percepções',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 25,
@@ -135,7 +135,7 @@ class _MenuPageState extends State<MenuPage> {
                   ),
                   Container(
                     width: 300,
-                    margin: EdgeInsets.only(top: 20, bottom: 5),
+                    margin: EdgeInsets.only(top: 40),
                     child: Text(
                       'Relate seus resultados ',
                       textAlign: TextAlign.center,
@@ -181,6 +181,14 @@ class _MenuPageState extends State<MenuPage> {
                           ],
                         ),
                       ),
+                    ),
+                  ),
+                  Container(
+                    margin:
+                        const EdgeInsets.only(left: 20.0, right: 20.0, top: 40),
+                    child: Image.asset(
+                      'assets/logo-estimulo.png',
+                      width: 200,
                     ),
                   ),
                 ],
