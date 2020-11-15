@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:stimulus/pages/general_training_trail/financial.dart';
 
 class MenuGeneral extends StatefulWidget {
   @override
@@ -45,7 +46,14 @@ class _MenuGeneralState extends State<MenuGeneral> {
             Container(
               padding: EdgeInsets.all(6),
               child: GestureDetector(
-                onTap: () {},
+                onTap: () => {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FinancialPage(),
+                    ),
+                  ),
+                },
                 child: Card(
                   child: Container(
                     height: 130,
