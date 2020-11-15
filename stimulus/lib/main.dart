@@ -34,17 +34,20 @@ class _HomePageState extends State<HomePage> {
                       height: 60.0,
                       child: RaisedButton(
                         shape: new RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(12.0)),
+                          borderRadius: new BorderRadius.circular(12.0),
+                        ),
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LoginPage()),
+                              builder: (context) => LoginPage(),
+                            ),
                           );
                         },
-                        child: Text('ENTRAR',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 20)),
+                        child: Text(
+                          'ENTRAR',
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
                         color: Color(0xFF147c54), //#147c54
                       )),
                   Container(
@@ -52,22 +55,26 @@ class _HomePageState extends State<HomePage> {
                       height: 60.0,
                       child: FlatButton(
                         shape: new RoundedRectangleBorder(
-                            side: BorderSide(
-                              color: Color(0xFF147c54),
-                              width: 2,
-                              style: BorderStyle.solid,
-                            ),
-                            borderRadius: new BorderRadius.circular(12.0)),
+                          side: BorderSide(
+                            color: Color(0xFF147c54),
+                            width: 2,
+                            style: BorderStyle.solid,
+                          ),
+                          borderRadius: new BorderRadius.circular(12.0),
+                        ),
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => SignUpPage()),
+                              builder: (context) => SignUpPage(),
+                            ),
                           );
                         },
-                        child: Text('CADASTRAR',
-                            style: TextStyle(
-                                color: Color(0xFF147c54), fontSize: 20)),
+                        child: Text(
+                          'CADASTRAR',
+                          style:
+                              TextStyle(color: Color(0xFF147c54), fontSize: 20),
+                        ),
                       )),
                 ],
               ),
