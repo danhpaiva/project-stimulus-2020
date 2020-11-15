@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:stimulus/pages/general_training_trail/menu_general_training.dart';
 
 class MenuPage extends StatefulWidget {
   @override
@@ -48,37 +49,48 @@ class _MenuPageState extends State<MenuPage> {
                     height: 130,
                     width: 380,
                     margin: EdgeInsets.all(5),
-                    child: Card(
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        child: Row(
-                          children: [
-                            Container(
-                              child: Image.asset('assets/imagem_trilha_01.png'),
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(top: 20),
-                                  width: 180,
-                                  child: Text(
-                                    'Capacitação Geral',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 20),
+                    child: GestureDetector(
+                      onTap: () => {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MenuGeneral(),
+                          ),
+                        ),
+                      },
+                      child: Card(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          child: Row(
+                            children: [
+                              Container(
+                                child:
+                                    Image.asset('assets/imagem_trilha_01.png'),
+                              ),
+                              Column(
+                                children: [
+                                  Container(
+                                    margin: EdgeInsets.only(top: 20),
+                                    width: 180,
+                                    child: Text(
+                                      'Capacitação Geral',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 20),
+                                    ),
                                   ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 3),
-                                  width: 180,
-                                  child: Text(
-                                    'Faça cursos para ampliar seus conhecimentos.',
-                                    style: TextStyle(fontSize: 15),
+                                  Container(
+                                    margin: EdgeInsets.only(top: 3),
+                                    width: 180,
+                                    child: Text(
+                                      'Faça cursos para ampliar seus conhecimentos.',
+                                      style: TextStyle(fontSize: 15),
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ],
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),

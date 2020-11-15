@@ -1,9 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-class MenuPage extends StatefulWidget {
+class MenuFinancial extends StatefulWidget {
   @override
-  _MenuPageState createState() => _MenuPageState();
+  _MenuFinancialState createState() => _MenuFinancialState();
 }
 
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
@@ -11,7 +11,7 @@ final SnackBar snackBar = const SnackBar(
   content: Text('Showing Snackbar'),
 );
 
-class _MenuPageState extends State<MenuPage> {
+class _MenuFinancialState extends State<MenuFinancial> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
