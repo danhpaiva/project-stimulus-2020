@@ -85,7 +85,7 @@ class _MenuGeneralState extends State<MenuGeneral> {
                         ),
                         Container(
                           width: 125,
-                          child: Image.asset('assets/image-financeiro-01.png'),
+                          child: Image.asset('assets/imagem-financeiro-01.png'),
                         ),
                       ],
                     ),
@@ -127,7 +127,7 @@ class _MenuGeneralState extends State<MenuGeneral> {
                         ),
                         Container(
                           width: 125,
-                          child: Image.asset('assets/image-comunicao-02.png'),
+                          child: Image.asset('assets/imagem-comunicao-02.png'),
                         ),
                       ],
                     ),
@@ -169,7 +169,7 @@ class _MenuGeneralState extends State<MenuGeneral> {
                         ),
                         Container(
                           width: 125,
-                          child: Image.asset('assets/image-tecnologia-03.png'),
+                          child: Image.asset('assets/imagem-tecnologia-03.png'),
                         ),
                       ],
                     ),
@@ -211,7 +211,7 @@ class _MenuGeneralState extends State<MenuGeneral> {
                         ),
                         Container(
                           width: 125,
-                          child: Image.asset('assets/image-gestaoRH-04.png'),
+                          child: Image.asset('assets/imagem-gestaoRH-04.png'),
                         ),
                       ],
                     ),
