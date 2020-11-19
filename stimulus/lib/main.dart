@@ -21,8 +21,8 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Container(
-                width: 300.0,
-                margin: const EdgeInsets.only(top: 160),
+                width: 250.0,
+                margin: const EdgeInsets.only(top: 100),
                 child: Image.asset(
                   'assets/logo.png',
                 )),
