@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                           'ENTRAR',
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
-                        color: Color(0xFF123C73),
+                        color: Color(0xFF011526),
                       )),
                   Container(
                       width: 150.0,
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                       child: FlatButton(
                         shape: new RoundedRectangleBorder(
                           side: BorderSide(
-                            color: Color(0xFF123C73),
+                            color: Color(0xFF011526),
                             width: 2,
                             style: BorderStyle.solid,
                           ),
@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                         child: Text(
                           'CADASTRAR',
                           style:
-                              TextStyle(color: Color(0xFF123C73), fontSize: 20),
+                              TextStyle(color: Color(0xFF011526), fontSize: 20),
                         ),
                       )),
                 ],
