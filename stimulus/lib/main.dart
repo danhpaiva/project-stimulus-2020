@@ -23,7 +23,9 @@ class _HomePageState extends State<HomePage> {
             Container(
                 width: 300.0,
                 margin: const EdgeInsets.only(top: 160),
-                child: Image.asset('assets/logo.png')),
+                child: Image.asset(
+                  'assets/logo.png',
+                )),
             Container(
               margin: const EdgeInsets.only(top: 140),
               child: Row(
@@ -48,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                           'ENTRAR',
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
-                        color: Color(0xFF147c54), //#147c54
+                        color: Color(0xFF123C73),
                       )),
                   Container(
                       width: 150.0,
@@ -56,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                       child: FlatButton(
                         shape: new RoundedRectangleBorder(
                           side: BorderSide(
-                            color: Color(0xFF147c54),
+                            color: Color(0xFF123C73),
                             width: 2,
                             style: BorderStyle.solid,
                           ),
@@ -73,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                         child: Text(
                           'CADASTRAR',
                           style:
-                              TextStyle(color: Color(0xFF147c54), fontSize: 20),
+                              TextStyle(color: Color(0xFF123C73), fontSize: 20),
                         ),
                       )),
                 ],
