@@ -17,10 +17,10 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
-              margin: EdgeInsets.only(top: 150),
+              margin: EdgeInsets.only(top: 130, bottom: 20),
               child: Image.asset(
-                'assets/logo.png',
-                width: 250,
+                'assets/logo-2.png',
+                width: 200,
               ),
             ),
             Container(
@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                         'LOGAR',
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
-                      color: Color(0xFF147c54),
+                      color: Color(0xFF011526),
                     ),
                   ),
                 ],
@@ -105,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                   'CADASTRE-SE',
                   style: TextStyle(
                     fontSize: 16,
-                    color: Color(0xFF147c54),
+                    color: Color(0xFF011526),
                   ),
                 ),
               ),

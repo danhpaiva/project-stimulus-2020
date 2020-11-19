@@ -18,10 +18,10 @@ class _SignUpPageState extends State<SignUpPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
-                margin: EdgeInsets.only(top: 100),
+                margin: EdgeInsets.only(top: 100, bottom: 10),
                 child: Image.asset(
-                  'assets/logo.png',
-                  width: 250,
+                  'assets/logo-2.png',
+                  width: 200,
                 )),
             Container(
               padding: EdgeInsets.only(left: 25, right: 25),
@@ -91,7 +91,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   'CADASTRAR',
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
-                color: Color(0xFF147c54),
+                color: Color(0xFF011526),
               ),
             ),
             Container(
@@ -107,7 +107,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 },
                 child: Text(
                   'ENTRAR',
-                  style: TextStyle(fontSize: 16, color: Color(0xFF147c54)),
+                  style: TextStyle(fontSize: 16, color: Color(0xFF011526)),
                 ),
               ),
             )

@@ -17,7 +17,7 @@ class _MenuPageState extends State<MenuPage> {
       home: Scaffold(
         key: scaffoldKey,
         appBar: AppBar(
-          backgroundColor: Color(0xFF147c54),
+          backgroundColor: Color(0xFF011526),
           title: Text('MENU PRINCIPAL'),
           actions: <Widget>[
             IconButton(
@@ -34,17 +34,6 @@ class _MenuPageState extends State<MenuPage> {
             children: <Widget>[
               Column(
                 children: [
-                  Container(
-                    width: 300,
-                    margin: EdgeInsets.only(top: 40),
-                    child: Text(
-                      'Adquira conhecimento',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 25,
-                      ),
-                    ),
-                  ),
                   Container(
                     height: 130,
                     width: 380,
