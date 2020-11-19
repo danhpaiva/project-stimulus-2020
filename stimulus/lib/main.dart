@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
                 width: 300.0,
                 margin: const EdgeInsets.only(top: 160),
                 child: Image.asset(
-                  'assets/logo.png',
+                  'assets/logos.png',
                 )),
             Container(
               margin: const EdgeInsets.only(top: 140),
