@@ -53,31 +53,32 @@ class _HomePageState extends State<HomePage> {
                         color: Color(0xFF011526),
                       )),
                   Container(
-                      width: 150.0,
-                      height: 60.0,
-                      child: FlatButton(
-                        shape: new RoundedRectangleBorder(
-                          side: BorderSide(
-                            color: Color(0xFF011526),
-                            width: 2,
-                            style: BorderStyle.solid,
+                    width: 150.0,
+                    height: 60.0,
+                    child: FlatButton(
+                      shape: new RoundedRectangleBorder(
+                        side: BorderSide(
+                          color: Color(0xFF011526),
+                          width: 2,
+                          style: BorderStyle.solid,
+                        ),
+                        borderRadius: new BorderRadius.circular(12.0),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignUpPage(),
                           ),
-                          borderRadius: new BorderRadius.circular(12.0),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SignUpPage(),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          'CADASTRAR',
-                          style:
-                              TextStyle(color: Color(0xFF011526), fontSize: 20),
-                        ),
-                      )),
+                        );
+                      },
+                      child: Text(
+                        'CADASTRAR',
+                        style:
+                            TextStyle(color: Color(0xFF011526), fontSize: 20),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

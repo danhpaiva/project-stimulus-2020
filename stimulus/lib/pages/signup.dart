@@ -18,11 +18,12 @@ class _SignUpPageState extends State<SignUpPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
-                margin: EdgeInsets.only(top: 100, bottom: 10),
-                child: Image.asset(
-                  'assets/logo-2.png',
-                  width: 200,
-                )),
+              margin: EdgeInsets.only(top: 100, bottom: 10),
+              child: Image.asset(
+                'assets/logo-2.png',
+                width: 200,
+              ),
+            ),
             Container(
               padding: EdgeInsets.only(left: 25, right: 25),
               child: Column(
@@ -79,6 +80,14 @@ class _SignUpPageState extends State<SignUpPage> {
             Container(
               width: 150,
               child: RaisedButton(
+                shape: new RoundedRectangleBorder(
+                  side: BorderSide(
+                    color: Color(0xFF011526),
+                    width: 2,
+                    style: BorderStyle.solid,
+                  ),
+                  borderRadius: new BorderRadius.circular(9.0),
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,

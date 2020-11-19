@@ -71,6 +71,14 @@ class _LoginPageState extends State<LoginPage> {
                     width: 120,
                     margin: EdgeInsets.only(top: 15),
                     child: RaisedButton(
+                      shape: new RoundedRectangleBorder(
+                        side: BorderSide(
+                          color: Color(0xFF011526),
+                          width: 2,
+                          style: BorderStyle.solid,
+                        ),
+                        borderRadius: new BorderRadius.circular(9.0),
+                      ),
                       onPressed: () {
                         Navigator.push(
                           context,
