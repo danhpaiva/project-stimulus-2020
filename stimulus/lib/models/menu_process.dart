@@ -38,10 +38,9 @@ class _MenuProcessState extends State<MenuProcess> {
     return Column(
       children: [
         Container(
-          height: 150,
-          width: 340,
-          padding: EdgeInsets.all(5),
-          margin: EdgeInsets.only(bottom: 8),
+          height: 180,
+          padding: EdgeInsets.all(20),
+          margin: EdgeInsets.only(bottom: 15),
           child: Container(
             decoration: BoxDecoration(
               border: Border(

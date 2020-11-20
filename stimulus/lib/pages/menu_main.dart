@@ -11,39 +11,21 @@ class MenuPage extends StatefulWidget {
 class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-
-      // <-- SCAFFOLD WITH TRANSPARENT BG
-      body: ListView(
+    return Material(
+      color: Colors.white,
+      child: ListView(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(top: 26),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image:
-                    AssetImage("assets/fundo-page.png"), // <-- BACKGROUND IMAGE
-                fit: BoxFit.cover,
-              ),
-            ),
             child: Column(
               children: [
                 Container(
                   width: 160,
                   margin: EdgeInsets.only(bottom: 10),
-                  //decoration: BoxDecoration(
-                  //border: Border(
-                  //bottom: BorderSide(
-                  //color: Colors.white,
-                  //width: 1.0,
-                  //),
-                  //),
-                  //),
                   child: Text(
                     'Stimulus',
                     style: TextStyle(
                         fontSize: 28,
-                        color: Colors.white,
+                        color: Color(0xFF011526),
                         fontFamily: 'Century'),
                     textAlign: TextAlign.center,
                   ),

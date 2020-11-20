@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'cards_advertising.dart';
 
 class ListViewAdvertinsing extends StatefulWidget {
