@@ -60,7 +60,9 @@ class _CardAdvertisingState extends State<CardAdvertising> {
             fit: BoxFit.cover,
             image: AssetImage('assets/$_imageCard'),
           ),
-          borderRadius: BorderRadius.all(Radius.circular(4.0)),
+          borderRadius: BorderRadius.all(
+            Radius.circular(4.0),
+          ),
         ),
       ),
     );

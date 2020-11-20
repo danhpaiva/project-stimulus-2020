@@ -73,7 +73,9 @@ class _MenuProcessState extends State<MenuProcess> {
                           child: Text(
                             '$_titleCard',
                             style: TextStyle(
-                                fontSize: 20, color: Color(0xff000000)),
+                              fontSize: 20,
+                              color: Color(0xff000000),
+                            ),
                           ),
                         ),
                         Container(

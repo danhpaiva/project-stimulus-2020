@@ -54,7 +54,11 @@ class _Modules_ListViewState extends State<Modules_ListView> {
               ),
               Container(
                 margin: EdgeInsets.only(top: 22, right: 4),
-                child: Icon(_iconModule, size: 26, color: Color(0xff042440)),
+                child: Icon(
+                  _iconModule,
+                  size: 26,
+                  color: Color(0xff042440),
+                ),
               ),
             ],
           ),
@@ -73,7 +77,9 @@ class _Modules_ListViewState extends State<Modules_ListView> {
               itemBuilder: (context, index) {
                 return Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(8.0),
+                    ),
                     border: Border.all(
                       color: Colors.grey[300],
                       width: 1, //                   <--- border width here
@@ -89,7 +95,9 @@ class _Modules_ListViewState extends State<Modules_ListView> {
                   margin: EdgeInsets.only(right: 10, bottom: 4),
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(8.0),
+                      ),
                     ),
                     width: 160,
                     child: GestureDetector(
@@ -98,7 +106,9 @@ class _Modules_ListViewState extends State<Modules_ListView> {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(8.0),
+                          ),
                           color: Colors.blue[100],
                         ),
                         child: Column(
@@ -136,8 +146,11 @@ class _Modules_ListViewState extends State<Modules_ListView> {
                                   ),
                                   Container(
                                     padding: EdgeInsets.only(right: 1),
-                                    child: Icon(Icons.play_arrow,
-                                        size: 22, color: Color(0xff042440)),
+                                    child: Icon(
+                                      Icons.play_arrow,
+                                      size: 22,
+                                      color: Color(0xff042440),
+                                    ),
                                   ),
                                 ],
                               ),

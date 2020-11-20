@@ -54,7 +54,8 @@ class _MenuPageState extends State<MenuPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => TrilhaCapacitacao()),
+                        builder: (context) => TrilhaCapacitacao(),
+                      ),
                     );
                   },
                   child: MenuProcess(
@@ -76,14 +77,15 @@ class _MenuPageState extends State<MenuPage> {
                           'Receba a mentoria de um empresário parceiro'),
                 ),
                 GestureDetector(
-                    onTap: () {},
-                    child: MenuProcess(
-                        textTitleInfo:
-                            'Relate os resultados do seu desenvolvimento',
-                        imageCard: 'relatorio-03.png',
-                        titleCard: 'Sua experiência',
-                        descriptionCard:
-                            'Avalie a eficácia do programa em seu negócio')),
+                  onTap: () {},
+                  child: MenuProcess(
+                      textTitleInfo:
+                          'Relate os resultados do seu desenvolvimento',
+                      imageCard: 'relatorio-03.png',
+                      titleCard: 'Sua experiência',
+                      descriptionCard:
+                          'Avalie a eficácia do programa em seu negócio'),
+                ),
               ],
             ),
           ),
