@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'cards_advertising.dart';
+import 'card.dart';
 
 class ListViewAdvertinsing extends StatefulWidget {
   @override

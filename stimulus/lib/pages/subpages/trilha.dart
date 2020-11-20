@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../models/modules_listview.dart';
+import '../../components/trilha/listview_modulos_trilha.dart';
 
 class TrilhaCapacitacao extends StatefulWidget {
   @override

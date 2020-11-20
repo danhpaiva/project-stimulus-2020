@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:stimulus/models/anuncio/listview_advertising.dart';
 import 'package:stimulus/pages/subpages/trilha.dart';
-import '../models/advertising/listview_advertising.dart';
-import '../models/menu_process.dart';
+import '../components/menu/cards_menu_principal.dart';
 
 class MenuPage extends StatefulWidget {
   @override
