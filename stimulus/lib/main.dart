@@ -4,7 +4,11 @@ import 'pages/signup.dart';
 import 'pages/login.dart';
 
 void main() {
-  runApp(MaterialApp(home: HomePage()));
+  runApp(
+    MaterialApp(
+      home: HomePage(),
+    ),
+  );
 }
 
 class HomePage extends StatefulWidget {
@@ -32,26 +36,27 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Container(
-                      width: 150.0,
-                      height: 60.0,
-                      child: RaisedButton(
-                        shape: new RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(12.0),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => LoginPage(),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          'ENTRAR',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        ),
-                        color: Color(0xFF011526),
-                      )),
+                    width: 150.0,
+                    height: 60.0,
+                    child: RaisedButton(
+                      shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(12.0),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginPage(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'ENTRAR',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                      color: Color(0xFF011526),
+                    ),
+                  ),
                   Container(
                     width: 150.0,
                     height: 60.0,

@@ -78,7 +78,9 @@ class _MenuGeneralState extends State<MenuGeneral> {
                                 width: 180,
                                 child: Text(
                                   'Capacitação em gestão de negócios',
-                                  style: TextStyle(color: Colors.grey[600]),
+                                  style: TextStyle(
+                                    color: Colors.grey[600],
+                                  ),
                                 ),
                               ),
                             ],
@@ -121,7 +123,9 @@ class _MenuGeneralState extends State<MenuGeneral> {
                                 width: 180,
                                 child: Text(
                                   'Capacitação em gestão de negócios',
-                                  style: TextStyle(color: Colors.grey[600]),
+                                  style: TextStyle(
+                                    color: Colors.grey[600],
+                                  ),
                                 ),
                               ),
                             ],
@@ -164,7 +168,9 @@ class _MenuGeneralState extends State<MenuGeneral> {
                                 width: 180,
                                 child: Text(
                                   'Capacitação em gestão de negócios',
-                                  style: TextStyle(color: Colors.grey[600]),
+                                  style: TextStyle(
+                                    color: Colors.grey[600],
+                                  ),
                                 ),
                               ),
                             ],
@@ -207,7 +213,9 @@ class _MenuGeneralState extends State<MenuGeneral> {
                                 width: 180,
                                 child: Text(
                                   'Capacitação em gestão de negócios',
-                                  style: TextStyle(color: Colors.grey[600]),
+                                  style: TextStyle(
+                                    color: Colors.grey[600],
+                                  ),
                                 ),
                               ),
                             ],

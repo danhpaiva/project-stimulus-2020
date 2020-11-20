@@ -61,8 +61,9 @@ class _SignUpPageState extends State<SignUpPage> {
                     width: 350,
                     child: TextField(
                       decoration: InputDecoration(
-                          labelText: '  Digite seu email',
-                          labelStyle: TextStyle(fontSize: 16)),
+                        labelText: '  Digite seu email',
+                        labelStyle: TextStyle(fontSize: 16),
+                      ),
                     ),
                   ),
                   Container(
@@ -70,8 +71,9 @@ class _SignUpPageState extends State<SignUpPage> {
                     width: 350,
                     child: TextField(
                       decoration: InputDecoration(
-                          labelText: '  Digite sua senha',
-                          labelStyle: TextStyle(fontSize: 16)),
+                        labelText: '  Digite sua senha',
+                        labelStyle: TextStyle(fontSize: 16),
+                      ),
                     ),
                   ),
                 ],
@@ -116,7 +118,10 @@ class _SignUpPageState extends State<SignUpPage> {
                 },
                 child: Text(
                   'ENTRAR',
-                  style: TextStyle(fontSize: 16, color: Color(0xFF011526)),
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF011526),
+                  ),
                 ),
               ),
             )
