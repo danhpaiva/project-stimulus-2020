@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stimulus/models/anuncio/listview_advertising.dart';
-import 'package:stimulus/pages/subpages/trilha.dart';
+import 'package:stimulus/pages/trilha/trilha.dart';
 import '../components/menu/cards_menu_principal.dart';
 
 class MenuPage extends StatefulWidget {
