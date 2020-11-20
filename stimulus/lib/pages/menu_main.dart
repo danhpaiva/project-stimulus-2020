@@ -1,204 +1,93 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:stimulus/pages/general_training_trail/menu_general_training.dart';
+import 'package:stimulus/pages/subpages/trilha.dart';
+import '../models/advertising/listview_advertising.dart';
+import '../models/menu_process.dart';
 
 class MenuPage extends StatefulWidget {
   @override
   _MenuPageState createState() => _MenuPageState();
 }
 
-final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-final SnackBar snackBar = const SnackBar(
-  content: Text('Showing Snackbar'),
-);
-
 class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        key: scaffoldKey,
-        appBar: AppBar(
-          backgroundColor: Color(0xFF011526),
-          title: Text('MENU PRINCIPAL'),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.add_alert),
-              tooltip: 'Show Snackbar',
-              onPressed: () {
-                scaffoldKey.currentState.showSnackBar(snackBar);
-              },
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+
+      // <-- SCAFFOLD WITH TRANSPARENT BG
+      body: ListView(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.only(top: 26),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image:
+                    AssetImage("assets/fundo-page.png"), // <-- BACKGROUND IMAGE
+                fit: BoxFit.cover,
+              ),
             ),
-          ],
-        ),
-        body: Container(
-          child: ListView(
-            children: <Widget>[
-              Column(
-                children: [
-                  Container(
-                    height: 130,
-                    width: 380,
-                    margin: EdgeInsets.all(5),
-                    child: GestureDetector(
-                      onTap: () => {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => MenuGeneral(),
-                          ),
-                        ),
-                      },
-                      child: Card(
-                        child: Container(
-                          margin: EdgeInsets.all(10),
-                          child: Row(
-                            children: [
-                              Container(
-                                child:
-                                    Image.asset('assets/imagem_trilha_01.png'),
-                              ),
-                              Column(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(top: 20),
-                                    width: 180,
-                                    child: Text(
-                                      'Capacitação Geral',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 20),
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.only(top: 3),
-                                    width: 180,
-                                    child: Text(
-                                      'Faça cursos para ampliar seus conhecimentos.',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+            child: Column(
+              children: [
+                Container(
+                  width: 160,
+                  margin: EdgeInsets.only(bottom: 10),
+                  //decoration: BoxDecoration(
+                  //border: Border(
+                  //bottom: BorderSide(
+                  //color: Colors.white,
+                  //width: 1.0,
+                  //),
+                  //),
+                  //),
+                  child: Text(
+                    'Stimulus',
+                    style: TextStyle(
+                        fontSize: 28,
+                        color: Colors.white,
+                        fontFamily: 'Century'),
+                    textAlign: TextAlign.center,
                   ),
-                  Container(
-                    width: 300,
-                    margin: EdgeInsets.only(top: 40),
-                    child: Text(
-                      'Desenvolva percepções',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 25,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 130,
-                    width: 380,
-                    margin: EdgeInsets.all(5),
-                    child: Card(
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        child: Row(
-                          children: [
-                            Container(
-                              child: Image.asset('assets/imagem-trilha-02.png'),
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(top: 20),
-                                  width: 180,
-                                  child: Text(
-                                    'Mentoria específica',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 20),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 3),
-                                  width: 180,
-                                  child: Text(
-                                    'Receba a mentoria de um empresário parceiro.',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 300,
-                    margin: EdgeInsets.only(top: 40),
-                    child: Text(
-                      'Relate seus resultados ',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 25,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 130,
-                    width: 380,
-                    margin: EdgeInsets.all(5),
-                    child: Card(
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        child: Row(
-                          children: [
-                            Container(
-                              child: Image.asset('assets/imagem-trilha-03.png'),
-                            ),
-                            Column(
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(top: 20),
-                                  width: 180,
-                                  child: Text(
-                                    'Sua experiência',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 20),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 3),
-                                  width: 180,
-                                  child: Text(
-                                    'Avalie a eficácia do programa em seu negócio.',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin:
-                        const EdgeInsets.only(left: 20.0, right: 20.0, top: 40),
-                    child: Image.asset(
-                      'assets/logo-estimulo.png',
-                      width: 200,
-                    ),
-                  ),
-                ],
-              )
-            ],
+                ),
+                ListViewAdvertinsing(),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TrilhaCapacitacao()),
+                    );
+                  },
+                  child: MenuProcess(
+                      textTitleInfo:
+                          'Adquira conhecimento a partir dos nossos cursos',
+                      imageCard: 'trilha-01.png',
+                      titleCard: 'Capacitação Geral',
+                      descriptionCard:
+                          'Faça cursos para ampliar seus conhecimentos'),
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: MenuProcess(
+                      textTitleInfo:
+                          'Desenvolva novas percepções com seu mentor',
+                      imageCard: 'monitoria-02.png',
+                      titleCard: 'Mentoria Específica',
+                      descriptionCard:
+                          'Receba a mentoria de um empresário parceiro'),
+                ),
+                GestureDetector(
+                    onTap: () {},
+                    child: MenuProcess(
+                        textTitleInfo:
+                            'Relate os resultados do seu desenvolvimento',
+                        imageCard: 'relatorio-03.png',
+                        titleCard: 'Sua experiência',
+                        descriptionCard:
+                            'Avalie a eficácia do programa em seu negócio')),
+              ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
