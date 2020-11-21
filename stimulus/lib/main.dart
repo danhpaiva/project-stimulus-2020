@@ -36,8 +36,8 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Container(
-                      width: constraints.maxWidth * .4,
-                      height: constraints.maxHeight * .07,
+                      width: constraints.maxWidth * .35,
+                      height: constraints.maxHeight * .065,
                       child: RaisedButton(
                         shape: new RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(12.0),
@@ -52,14 +52,16 @@ class _HomePageState extends State<HomePage> {
                         },
                         child: Text(
                           'ENTRAR',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: constraints.maxWidth * 0.047),
                         ),
                         color: Color(0xFF011526),
                       ),
                     ),
                     Container(
-                      width: constraints.maxWidth * .4,
-                      height: constraints.maxHeight * .07,
+                      width: constraints.maxWidth * .35,
+                      height: constraints.maxHeight * .065,
                       child: FlatButton(
                         shape: new RoundedRectangleBorder(
                           side: BorderSide(
@@ -79,8 +81,9 @@ class _HomePageState extends State<HomePage> {
                         },
                         child: Text(
                           'CADASTRAR',
-                          style:
-                              TextStyle(color: Color(0xFF011526), fontSize: 20),
+                          style: TextStyle(
+                              color: Color(0xFF011526),
+                              fontSize: constraints.maxWidth * 0.047),
                         ),
                       ),
                     ),
@@ -88,7 +91,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+                margin:
+                    const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 15),
                 child: Image.asset('assets/logo-estimulo.png',
                     width: constraints.maxWidth * 0.5),
               ),
