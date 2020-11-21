@@ -111,7 +111,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
               ),
               Container(
-                width: constraints.maxWidth * .35,
+                width: constraints.maxWidth * .4,
                 height: constraints.maxHeight * .065,
                 child: RaisedButton(
                   shape: new RoundedRectangleBorder(

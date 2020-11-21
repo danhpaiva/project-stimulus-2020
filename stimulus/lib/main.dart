@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Container(
-                      width: constraints.maxWidth * .35,
+                      width: constraints.maxWidth * .4,
                       height: constraints.maxHeight * .065,
                       child: RaisedButton(
                         shape: new RoundedRectangleBorder(
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Container(
-                      width: constraints.maxWidth * .35,
+                      width: constraints.maxWidth * .4,
                       height: constraints.maxHeight * .065,
                       child: FlatButton(
                         shape: new RoundedRectangleBorder(

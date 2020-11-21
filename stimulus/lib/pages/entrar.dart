@@ -89,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     Container(
-                      width: constraints.maxWidth * .35,
+                      width: constraints.maxWidth * .4,
                       height: constraints.maxHeight * .065,
                       margin: EdgeInsets.only(top: 15),
                       child: RaisedButton(
