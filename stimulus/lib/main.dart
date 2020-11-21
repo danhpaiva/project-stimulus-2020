@@ -19,83 +19,82 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Material(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Container(
-                width: 250.0,
-                margin: const EdgeInsets.only(top: 100),
-                child: Image.asset(
-                  'assets/logo.png',
-                )),
-            Container(
-              margin: const EdgeInsets.only(top: 140),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Container(
-                    width: 150.0,
-                    height: 60.0,
-                    child: RaisedButton(
-                      shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(12.0),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => LoginPage(),
-                          ),
-                        );
-                      },
-                      child: Text(
-                        'ENTRAR',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                      color: Color(0xFF011526),
-                    ),
-                  ),
-                  Container(
-                    width: 150.0,
-                    height: 60.0,
-                    child: FlatButton(
-                      shape: new RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: Color(0xFF011526),
-                          width: 2,
-                          style: BorderStyle.solid,
+    return Material(
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                  width: constraints.maxWidth * .5,
+                  margin: const EdgeInsets.only(top: 100),
+                  child: Image.asset(
+                    'assets/logo.png',
+                  )),
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Container(
+                      width: constraints.maxWidth * .4,
+                      height: constraints.maxHeight * .07,
+                      child: RaisedButton(
+                        shape: new RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(12.0),
                         ),
-                        borderRadius: new BorderRadius.circular(12.0),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SignUpPage(),
-                          ),
-                        );
-                      },
-                      child: Text(
-                        'CADASTRAR',
-                        style:
-                            TextStyle(color: Color(0xFF011526), fontSize: 20),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginPage(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'ENTRAR',
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                        color: Color(0xFF011526),
                       ),
                     ),
-                  ),
-                ],
+                    Container(
+                      width: constraints.maxWidth * .4,
+                      height: constraints.maxHeight * .07,
+                      child: FlatButton(
+                        shape: new RoundedRectangleBorder(
+                          side: BorderSide(
+                            color: Color(0xFF011526),
+                            width: 2,
+                            style: BorderStyle.solid,
+                          ),
+                          borderRadius: new BorderRadius.circular(12.0),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignUpPage(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'CADASTRAR',
+                          style:
+                              TextStyle(color: Color(0xFF011526), fontSize: 20),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 20.0, right: 20.0, top: 200),
-              child: Image.asset(
-                'assets/logo-estimulo.png',
-                width: 200,
+              Container(
+                margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+                child: Image.asset('assets/logo-estimulo.png',
+                    width: constraints.maxWidth * 0.5),
               ),
-            ),
-          ],
-        ),
+            ],
+          );
+        },
       ),
     );
   }

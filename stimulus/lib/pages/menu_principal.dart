@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stimulus/models/anuncio/listview_advertising.dart';
+import 'package:stimulus/components/anuncio/listview.dart';
 import 'package:stimulus/pages/trilha/trilha.dart';
 import '../components/menu/cards_menu_principal.dart';
 
