@@ -40,23 +40,49 @@ class _TrilhaCapacitacaoState extends State<TrilhaCapacitacao> {
           Modules_ListView(
             moduleName: 'Comunicação e Marketing',
             iconModule: Icons.campaign,
-            imagesCards: ['comun-market-grafico-01.png'],
-            titleCards: ['Como desenvolvo a comunicação no meu negócio?'],
+            imagesCards: [
+              'comun-market-grafico-01.png',
+              'comun-market-alvo-02.png',
+              'comun-market-crescimento-03.png',
+              'comun-market-midias-04.png'
+            ],
+            titleCards: [
+              'Como desenvolvo a comunicação no meu negócio?',
+              'Quais as estratégias de marketing alavancarão seu negócio',
+              'Etapas para gerar desenvolvimento para seu processo',
+              'A importância de transmitir sua marca'
+            ],
           ),
           Modules_ListView(
             moduleName: 'Tecnologia e Inovação',
             iconModule: Icons.batch_prediction,
-            imagesCards: ['tecn-inova-pensando-01.png'],
+            imagesCards: [
+              'tecn-inova-pensando-01.png',
+              'tecn-inova-mudancas-02.png',
+              'tecn-inova-tecnologia-03.png',
+              'tecn-inova-transformar-04.png',
+            ],
             titleCards: [
-              'Como uma inovação pode alavancar o seu negócio por inteiro?'
+              'Como uma inovação pode alavancar o seu negócio por inteiro?',
+              'Mudanças podem beneficiar meu negócio?',
+              'Introduzindo um metódo tecnologico no meu processo',
+              'Transformando o ambiente de trabalho e gerando lucro',
             ],
           ),
           Modules_ListView(
             moduleName: 'Gestão de RH',
             iconModule: Icons.assignment_ind,
-            imagesCards: ['gestao-rh-pessoa-01.png'],
+            imagesCards: [
+              'gestao-rh-pessoa-01.png',
+              'gestao-rh-treinamento-02.png',
+              'gestao-rh-feedback-03.png',
+              'gestao-rh-contratacao-04.png',
+            ],
             titleCards: [
-              'O gerenciamento de recursos humanos e sua importância'
+              'O gerenciamento de recursos humanos e sua importância',
+              'A importância de invetir em treinamentos',
+              'Utilização do feedback para o desempenho das pessoas',
+              'Otimização do seu processo de contratação',
             ],
           ),
         ],

@@ -58,26 +58,31 @@ class _MenuPageState extends State<MenuPage> {
                                           TrilhaCapacitacao()));
                             },
                             child: MenuProcess(
-                                imageCard: 'trilha-01.png',
-                                titleCard: 'Capacitação Geral',
-                                descriptionCard:
-                                    'Faça cursos para ampliar seus conhecimentos'),
+                              imageCard: 'trilha-01.png',
+                              titleCard: 'Capacitação Geral',
+                              descriptionCard:
+                                  'Faça cursos para ampliar seus conhecimentos',
+                              iconCard: Icons.addchart_rounded,
+                            ),
                           ),
                           GestureDetector(
                             onTap: () {},
                             child: MenuProcess(
-                                imageCard: 'monitoria-02.png',
-                                titleCard: 'Mentoria Específica',
-                                descriptionCard:
-                                    'Receba a mentoria de um empresário parceiro'),
+                              imageCard: 'monitoria-02.png',
+                              titleCard: 'Mentoria Específica',
+                              descriptionCard:
+                                  'Receba a mentoria de um empresário parceiro',
+                              iconCard: Icons.add_comment_rounded,
+                            ),
                           ),
                           GestureDetector(
                             onTap: () {},
                             child: MenuProcess(
                                 imageCard: 'relatorio-03.png',
-                                titleCard: 'Sua experiência',
+                                titleCard: 'Acompanhamento do Negócio',
                                 descriptionCard:
-                                    'Avalie a eficácia do programa em seu negócio'),
+                                    'Avalie a eficácia do programa em seu negócio',
+                                iconCard: Icons.add_business),
                           ),
                         ],
                       ),

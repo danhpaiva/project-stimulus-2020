@@ -4,29 +4,33 @@ class MenuProcess extends StatefulWidget {
   final String imageCard;
   final String titleCard;
   final String descriptionCard;
+  final IconData iconCard;
 
   MenuProcess(
       {Key key,
       @required this.imageCard,
       @required this.titleCard,
-      @required this.descriptionCard})
+      @required this.descriptionCard,
+      @required this.iconCard})
       : super(key: key);
 
   @override
   _MenuProcessState createState() =>
-      _MenuProcessState(imageCard, titleCard, descriptionCard);
+      _MenuProcessState(imageCard, titleCard, descriptionCard, iconCard);
 }
 
 class _MenuProcessState extends State<MenuProcess> {
   String _imageCard;
   String _titleCard;
   String _descriptionCards;
+  IconData _iconCard;
 
-  _MenuProcessState(
-      String imageCard, String titleCard, String descriptionCard) {
+  _MenuProcessState(String imageCard, String titleCard, String descriptionCard,
+      IconData iconCard) {
     this._imageCard = imageCard;
     this._titleCard = titleCard;
     this._descriptionCards = descriptionCard;
+    this._iconCard = iconCard;
   }
 
   @override
@@ -61,6 +65,7 @@ class _MenuProcessState extends State<MenuProcess> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
+                  width: size.width * 0.5,
                   margin: EdgeInsets.only(top: 2),
                   child: Text(
                     '$_titleCard',
@@ -86,8 +91,9 @@ class _MenuProcessState extends State<MenuProcess> {
           Container(
             padding: EdgeInsets.only(bottom: size.height * 0.15),
             child: Icon(
-              Icons.ac_unit,
+              _iconCard,
               size: size.width * 0.05,
+              color: Color(0xff042440),
             ),
           )
         ],
