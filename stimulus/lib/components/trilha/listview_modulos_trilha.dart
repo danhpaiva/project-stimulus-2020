@@ -102,7 +102,7 @@ class _Modules_ListViewState extends State<Modules_ListView> {
                     width: 160,
                     child: GestureDetector(
                       onTap: () {
-                        debugPrint('clicou $index');
+                        debugPrint('Modulo: $_moduleName - Index: $index ');
                       },
                       child: Container(
                         decoration: BoxDecoration(
