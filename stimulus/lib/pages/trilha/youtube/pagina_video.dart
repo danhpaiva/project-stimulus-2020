@@ -61,10 +61,15 @@ class _YoutubePageVideosState extends State<YoutubePageVideos> {
         body: Container(
           width: MediaQuery.of(context).size.width,
           padding: EdgeInsets.all(8),
-          child: RodarYoutube(
-            "$_url",
-            '$_titulo',
-            '$_descricao',
+          child: Column(
+            children: [
+              RodarYoutube(
+                "$_url",
+                '$_titulo',
+                '$_descricao',
+              ),
+              Text('Teste..')
+            ],
           ),
         ),
       ),
