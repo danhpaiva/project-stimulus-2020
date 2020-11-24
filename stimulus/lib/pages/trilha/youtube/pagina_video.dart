@@ -3,23 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:stimulus/components/youtube/youtube-player.dart';
 
 class YoutubePageVideos extends StatefulWidget {
-  
   final String url;
   final String nomeModulo;
   final String titulo;
   final String descricao;
 
-  YoutubePageVideos(
-      {Key key,
-      @required this.url,
-      @required this.nomeModulo,
-      @required this.titulo,
-      @required this.descricao,
-      })
-      : super(key: key);
+  YoutubePageVideos({
+    Key key,
+    @required this.url,
+    @required this.nomeModulo,
+    @required this.titulo,
+    @required this.descricao,
+  }) : super(key: key);
 
   @override
-  _YoutubePageVideosState createState() => _YoutubePageVideosState(url, nomeModulo, titulo, descricao);
+  _YoutubePageVideosState createState() =>
+      _YoutubePageVideosState(url, nomeModulo, titulo, descricao);
 }
 
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
@@ -31,8 +30,8 @@ class _YoutubePageVideosState extends State<YoutubePageVideos> {
   String _titulo;
   String _descricao;
 
-
-  _YoutubePageVideosState(String url, String nomeModulo, String titulo, String descricao) {
+  _YoutubePageVideosState(
+      String url, String nomeModulo, String titulo, String descricao) {
     this._url = url;
     this._nomeModulo = nomeModulo;
     this._titulo = titulo;
@@ -45,7 +44,7 @@ class _YoutubePageVideosState extends State<YoutubePageVideos> {
       home: Scaffold(
         key: scaffoldKey,
         appBar: AppBar(
-          backgroundColor: Color(0xFF147c54),
+          backgroundColor: Color(0xFF011526),
           title: Text('Youtube'),
           actions: <Widget>[
             IconButton(
@@ -58,13 +57,13 @@ class _YoutubePageVideosState extends State<YoutubePageVideos> {
           ],
         ),
         body: Container(
-          width:  MediaQuery.of(context).size.width,
+          width: MediaQuery.of(context).size.width,
           padding: EdgeInsets.all(8),
           child: RodarYoutube(
             "$_url",
             '$_titulo',
             '$_descricao',
-          ),  
+          ),
         ),
       ),
     );
