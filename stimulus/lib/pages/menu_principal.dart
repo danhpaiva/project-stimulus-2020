@@ -52,10 +52,11 @@ class _MenuPageState extends State<MenuPage> {
                           GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          TrilhaCapacitacao()));
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => TrilhaCapacitacao(),
+                                ),
+                              );
                             },
                             child: MenuProcess(
                               imageCard: 'trilha-01.png',

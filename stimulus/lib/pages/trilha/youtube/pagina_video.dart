@@ -22,7 +22,9 @@ class YoutubePageVideos extends StatefulWidget {
 }
 
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-final SnackBar snackBar = const SnackBar(content: Text('Showing Snackbar'));
+final SnackBar snackBar = const SnackBar(
+  content: Text('Showing Snackbar'),
+);
 
 class _YoutubePageVideosState extends State<YoutubePageVideos> {
   String _url;
