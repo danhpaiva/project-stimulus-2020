@@ -5,7 +5,7 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 class RodarYoutube extends StatefulWidget {
   String videoURL;
   String title;
-  String des;
+  String descricao;
 
   @override
   RodarYoutubeState createState() => RodarYoutubeState();
@@ -13,7 +13,7 @@ class RodarYoutube extends StatefulWidget {
   RodarYoutube(
     this.videoURL,
     this.title,
-    this.des,
+    this.descricao,
   );
 }
 
@@ -35,48 +35,67 @@ class RodarYoutubeState extends State<RodarYoutube> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      child: YoutubePlayerBuilder(
-        player: YoutubePlayer(
-          controller: _controller,
-          aspectRatio: 16 / 9,
-          showVideoProgressIndicator: true,
+          child: YoutubePlayerBuilder(
+          player: YoutubePlayer(
+            controller: _controller,
+            aspectRatio: 16 / 9,
+            showVideoProgressIndicator: true,
         ),
         builder: (context, player) {
-          return Column(
-            children: <Widget>[
-              player,
-              SingleChildScrollView(
-                physics: AlwaysScrollableScrollPhysics(),
-                child: Container(
-                  child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Column(
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Text(
-                            widget.title.toUpperCase(),
-                            style: TextStyle(
+          return Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(8.0),),
+              color: Colors.blue[100],
+            ),
+            margin: EdgeInsets.only(top:20),
+            height: MediaQuery.of(context).size.height * 0.6,
+            child: Column(
+              children: <Widget>[
+                Container(
+                  width:  MediaQuery.of(context).size.width,
+                  padding: EdgeInsets.only(top: 14, bottom: 12, left: 12),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
+                    color: Color(0xFF011526),
+                  ),
+                  child: Text('Financeiro', style: TextStyle(color: Colors.white, fontSize: 22))
+                ),
+                Container(
+                  padding: EdgeInsets.all(10),
+                  child: player
+                ),
+                Container(
+                  padding: EdgeInsets.all(11),
+                  child: SingleChildScrollView(
+                    physics: AlwaysScrollableScrollPhysics(),
+                    child:  Container(
+                      width: MediaQuery.of(context).size.width,
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            child: Text(
+                              widget.title,
+                              style: TextStyle(
                                 fontFamily: 'TT NORMS',
-                                fontSize: 20,
-                                fontWeight: FontWeight.w400),
-                            textAlign: TextAlign.center,
+                                fontSize: 21,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Text(
-                            widget.des,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(),
+                          Container(
+                            padding: EdgeInsets.only(top: 12, right: 5),
+                            child: Text(
+                              widget.descricao,
+                              style: TextStyle(color: Colors.grey[700]),
+                            ),
                           ),
-                        )
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           );
         },
       ),

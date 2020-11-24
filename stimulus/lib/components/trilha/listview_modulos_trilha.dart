@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stimulus/pages/trilha/youtube/pagina_video.dart';
 
 class Modules_ListView extends StatefulWidget {
   final moduleName;
@@ -102,7 +103,13 @@ class _Modules_ListViewState extends State<Modules_ListView> {
                     width: 160,
                     child: GestureDetector(
                       onTap: () {
-                        debugPrint('Modulo: $_moduleName - Index: $index ');
+                        //debugPrint('Modulo: $_moduleName - Index: $index ');
+                         /*Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          YoutubeFinanceiro(url: index)));*/
+                        definicaoDosVideos(_moduleName, index, _titleCards[index], context);
                       },
                       child: Container(
                         decoration: BoxDecoration(
@@ -168,4 +175,35 @@ class _Modules_ListViewState extends State<Modules_ListView> {
       ],
     );
   }
+}
+
+void definicaoDosVideos(nomeModulo, index, titulo, context) {
+
+    if (nomeModulo == "Financeiro") {
+    switch (index) {
+      case 0:
+        nevegacaoTelaYoutube('https://youtu.be/U2Dkxj2hMAM',nomeModulo, titulo,"É importante manter a saúde financeira da sua empresa nesse momento. Para isso, aqui estão cinco dicas para te ajudar a ficar de olho no caixa do seu negócio.", context); break;
+      case 1:
+        nevegacaoTelaYoutube('https://youtu.be/zbnm-_8t3fs',nomeModulo, titulo,'', context); break;
+      case 2:
+        nevegacaoTelaYoutube('https://youtu.be/xxgb43JJUCc',nomeModulo, titulo,'', context); break;
+      case 3:
+        nevegacaoTelaYoutube('https://youtu.be/SJyX3mD7sxE',nomeModulo, titulo,'', context); break;
+        
+      default: "Error switch";
+    }} 
+  
+  if (nomeModulo == 'Comunicação e Marketing' && index == 1) {
+    nevegacaoTelaYoutube('https://youtu.be/rlR4PJn8b8I',nomeModulo, titulo, '', context);
+  } 
+}
+
+
+
+
+
+void nevegacaoTelaYoutube(String url, String nomeModulo, String titulo, String descricao, context) {
+  Navigator.push(context, 
+    MaterialPageRoute(builder: (context) =>
+      YoutubePageVideos(url: url, nomeModulo: nomeModulo, titulo: titulo, descricao: descricao )));
 }

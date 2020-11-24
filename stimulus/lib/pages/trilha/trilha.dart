@@ -34,7 +34,7 @@ class _TrilhaCapacitacaoState extends State<TrilhaCapacitacao> {
               'Como mantenho minhas contas em dia?',
               'Como vender durante a pandemia?',
               'Como organizar minhas despesas?',
-              'Como as medias do governo podem ajudar o meu negócio?'
+              'Como as medidas do governo podem ajudar o meu negócio?'
             ],
           ),
           Modules_ListView(
