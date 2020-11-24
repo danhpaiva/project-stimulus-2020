@@ -50,7 +50,7 @@ class RodarYoutubeState extends State<RodarYoutube> {
                 color: Colors.blue[100],
               ),
               margin: EdgeInsets.only(top: 20),
-              height: MediaQuery.of(context).size.height * 0.6,
+              padding: EdgeInsets.only(bottom: 10),
               child: Column(
                 children: <Widget>[
                   Container(
