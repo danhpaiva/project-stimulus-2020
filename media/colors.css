@@ -1,0 +1,20 @@
+/* Color Theme Swatches in Hex */
+.Dark-blue-grungy-distressed-canvas-bacground-1-hex { color: #123C73; }
+.Dark-blue-grungy-distressed-canvas-bacground-2-hex { color: #011526; }
+.Dark-blue-grungy-distressed-canvas-bacground-3-hex { color: #042440; }
+.Dark-blue-grungy-distressed-canvas-bacground-4-hex { color: #164773; }
+.Dark-blue-grungy-distressed-canvas-bacground-5-hex { color: #6889A6; }
+
+/* Color Theme Swatches in RGBA */
+.Dark-blue-grungy-distressed-canvas-bacground-1-rgba { color: rgba(18, 60, 114, 1); }
+.Dark-blue-grungy-distressed-canvas-bacground-2-rgba { color: rgba(0, 20, 38, 1); }
+.Dark-blue-grungy-distressed-canvas-bacground-3-rgba { color: rgba(3, 35, 63, 1); }
+.Dark-blue-grungy-distressed-canvas-bacground-4-rgba { color: rgba(21, 71, 114, 1); }
+.Dark-blue-grungy-distressed-canvas-bacground-5-rgba { color: rgba(104, 137, 165, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Dark-blue-grungy-distressed-canvas-bacground-1-hsla { color: hsla(213, 72, 26, 1); }
+.Dark-blue-grungy-distressed-canvas-bacground-2-hsla { color: hsla(208, 96, 7, 1); }
+.Dark-blue-grungy-distressed-canvas-bacground-3-hsla { color: hsla(208, 88, 13, 1); }
+.Dark-blue-grungy-distressed-canvas-bacground-4-hsla { color: hsla(208, 68, 26, 1); }
+.Dark-blue-grungy-distressed-canvas-bacground-5-hsla { color: hsla(208, 25, 52, 1); }
