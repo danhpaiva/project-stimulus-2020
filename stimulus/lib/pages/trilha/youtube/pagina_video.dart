@@ -1,5 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:stimulus/components/anuncio/card.dart';
+import 'package:stimulus/components/menu/cards_menu_principal.dart';
 import 'package:stimulus/components/youtube/youtube-player.dart';
 
 class YoutubePageVideos extends StatefulWidget {
@@ -68,7 +70,50 @@ class _YoutubePageVideosState extends State<YoutubePageVideos> {
                 '$_titulo',
                 '$_descricao',
               ),
-              Text('Teste..')
+              Container(
+                child: Expanded(
+                  child: ListView(
+                    padding: EdgeInsets.only(right: 10),
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        child: Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 20, bottom: 10),
+                              width: 120,
+                              height: 120,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey[300],
+                                  width:
+                                      1, //                   <--- border width here
+                                ),
+                                color: Colors.blue[100],
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: AssetImage('assets/monitoria-02.png'),
+                                ),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(100.0),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: Text(
+                                'Mentoria Especifica',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
