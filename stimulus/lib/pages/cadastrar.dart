@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:stimulus/services/cadastro_user.dart';
 import 'entrar.dart';
 import 'menu_principal.dart';
 
@@ -9,6 +10,10 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  final nomeEmpresa = TextEditingController();
+  final emailCadastro = TextEditingController();
+  final senhaCadastro = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -57,6 +62,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       width: constraints.maxWidth * 0.85,
                       child: TextField(
+                        controller: nomeEmpresa,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -78,6 +84,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       width: constraints.maxWidth * 0.85,
                       child: TextField(
+                        controller: emailCadastro,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -97,6 +104,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       width: constraints.maxWidth * 0.85,
                       child: TextField(
+                        controller: senhaCadastro,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -123,12 +131,8 @@ class _SignUpPageState extends State<SignUpPage> {
                     borderRadius: new BorderRadius.circular(9.0),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => MenuPage(),
-                      ),
-                    );
+                    CadastrarUsuario.cadast(nomeEmpresa.text,
+                        emailCadastro.text, senhaCadastro.text, context);
                   },
                   child: Text(
                     'CADASTRAR',
