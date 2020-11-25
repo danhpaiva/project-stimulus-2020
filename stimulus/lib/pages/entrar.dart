@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:stimulus/services/verificacao_login.dart';
 import 'cadastrar.dart';
 import 'menu_principal.dart';
 
@@ -9,6 +10,9 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  TextEditingController _emailUser = TextEditingController();
+  TextEditingController _passwordUser = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -59,6 +63,8 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       width: constraints.maxWidth * 0.85,
                       child: TextField(
+                        controller: _emailUser,
+                        onChanged: (text) {},
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -78,6 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       width: constraints.maxWidth * 0.85,
                       child: TextField(
+                        controller: _passwordUser,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -102,12 +109,11 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: new BorderRadius.circular(9.0),
                         ),
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => MenuPage(),
-                            ),
-                          );
+                          VerificacaoLogin.verific(
+                              _emailUser.text, _passwordUser.text, context);
+
+                          /*Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => MenuPage())); */
                         },
                         child: Text(
                           'LOGAR',
