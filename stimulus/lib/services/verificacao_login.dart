@@ -8,12 +8,12 @@ class VerificacaoLogin {
   VerificacaoLogin.verific(email, senha, context) {
     buscar(email, senha, context) async {
       var response = await http
-          .get("http://192.168.1.170:3334/api/procurar/'$email'/'$senha'");
+          .post("http://192.168.1.170:3434/api/procurar/$email/$senha");
       var dados = jsonDecode(response.body);
-      debugPrint(dados['data'].toString());
 
       if (dados['message'] == 'success') {
-        debugPrint(dados['data'].toString());
+        debugPrint(dados['user'].toString());
+        debugPrint(dados['coletaFragilidade'].toString());
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => MenuPage()));
       }
