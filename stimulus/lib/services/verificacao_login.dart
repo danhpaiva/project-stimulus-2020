@@ -8,14 +8,18 @@ class VerificacaoLogin {
   VerificacaoLogin.verific(email, senha, context) {
     buscar(email, senha, context) async {
       var response =
-          await http.post("http://192.168.1.2:3434/api/procurar/$email/$senha");
+          await http.post("http://192.168.1.3:3434/api/procurar/$email/$senha");
       var dados = jsonDecode(response.body);
 
       if (dados['message'] == 'success') {
         debugPrint(dados['user'].toString());
         debugPrint(dados['coletaFragilidade'].toString());
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => MenuPage()));
+          context,
+          MaterialPageRoute(
+            builder: (context) => MenuPage(),
+          ),
+        );
       }
     }
 

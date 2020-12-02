@@ -8,12 +8,16 @@ class CadastrarUsuario {
   CadastrarUsuario.cadast(nomeEmpresa, email, senha, context) {
     cadastro(nomeEmpresa, email, senha, context) async {
       var response = await http.post(
-          "http://192.168.1.2:3434/api/cadastrar/$nomeEmpresa/$email/$senha");
+          "http://192.168.1.3:3434/api/cadastrar/$nomeEmpresa/$email/$senha");
       var dados = jsonDecode(response.body);
 
       if (dados['message'] == 'success') {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => MenuPage()));
+          context,
+          MaterialPageRoute(
+            builder: (context) => MenuPage(),
+          ),
+        );
       }
     }
 

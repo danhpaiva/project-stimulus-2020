@@ -4,7 +4,7 @@ import 'package:stimulus/components/anuncio/card.dart';
 import 'package:stimulus/components/menu/cards_menu_principal.dart';
 import 'package:stimulus/components/youtube/youtube-player.dart';
 import 'package:stimulus/pages/acompanhamento/acompanhamento_negocio.dart';
-import 'package:stimulus/pages/mentoria/mentoria_especifica.dart';
+import 'package:stimulus/pages/mentoria/mentoria_especifica_01.dart';
 import 'package:stimulus/pages/trilha/trilha.dart';
 
 class YoutubePageVideos extends StatefulWidget {
