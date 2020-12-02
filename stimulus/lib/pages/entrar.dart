@@ -84,6 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       width: constraints.maxWidth * 0.85,
                       child: TextField(
+                        obscureText: true,
                         controller: _passwordUser,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(

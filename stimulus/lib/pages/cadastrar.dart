@@ -104,6 +104,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       width: constraints.maxWidth * 0.85,
                       child: TextField(
+                        obscureText: true,
                         controller: senhaCadastro,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(

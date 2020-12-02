@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stimulus/components/anuncio/listview.dart';
+import 'package:stimulus/pages/acompanhamento/acompanhamento_negocio.dart';
+import 'package:stimulus/pages/mentoria/mentoria_especifica.dart';
 import 'package:stimulus/pages/trilha/trilha.dart';
 import '../components/menu/cards_menu_principal.dart';
 
@@ -67,7 +69,14 @@ class _MenuPageState extends State<MenuPage> {
                             ),
                           ),
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => MentoriaEspecifica(),
+                                ),
+                              );
+                            },
                             child: MenuProcess(
                               imageCard: 'monitoria-02.png',
                               titleCard: 'Mentoria Específica',
@@ -77,7 +86,14 @@ class _MenuPageState extends State<MenuPage> {
                             ),
                           ),
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => AcompanhamentoNegocio(),
+                                ),
+                              );
+                            },
                             child: MenuProcess(
                                 imageCard: 'relatorio-03.png',
                                 titleCard: 'Acompanhamento do Negócio',
