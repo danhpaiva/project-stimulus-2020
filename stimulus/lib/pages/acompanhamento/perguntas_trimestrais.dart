@@ -12,6 +12,7 @@ class _PerguntasAcompanhamentoState extends State<PerguntasAcompanhamento> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Questionário'),
+        backgroundColor: Color(0xff042440),
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {
@@ -56,7 +57,7 @@ class _PerguntasAcompanhamentoState extends State<PerguntasAcompanhamento> {
                     style: TextStyle(fontSize: constraints.maxWidth * 0.05),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 6, bottom: 10),
+                    margin: EdgeInsets.only(top: 6, bottom: 25),
                     child: TextField(
                       maxLines: 10,
                       decoration: InputDecoration(
@@ -67,8 +68,18 @@ class _PerguntasAcompanhamentoState extends State<PerguntasAcompanhamento> {
                     ),
                   ),
                   Container(
-                    width: double.infinity,
-                    child: RaisedButton(onPressed: null),
+                    width: constraints.maxWidth * 0.5,
+                    color: Colors.grey,
+                    height: constraints.maxHeight * 0.072,
+                    child: RaisedButton(
+                      child: Text(
+                        'Enviar',
+                        style: TextStyle(fontSize: constraints.maxWidth * 0.06),
+                      ),
+                      textColor: Colors.white,
+                      onPressed: () {},
+                      color: Color(0xff042440),
+                    ),
                   )
                 ],
               ),
