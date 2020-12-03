@@ -15,46 +15,63 @@ class _PerguntasAcompanhamentoState extends State<PerguntasAcompanhamento> {
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {
-          return Container(
-            child: Column(
-              children: [
-                Text('Seu negócio melhorou após a utilização do Stimulus?'),
-                Container(
-                  width: constraints.maxWidth * 0.8,
-                  height: constraints.maxHeight * 0.05,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
+          return Center(
+            child: Container(
+              margin: EdgeInsets.only(top: 20),
+              width: constraints.maxWidth * 0.9,
+              child: Column(
+                children: [
+                  Text(
+                    'Seu negócio melhorou após a utilização do Stimulus?',
+                    style: TextStyle(fontSize: constraints.maxWidth * 0.05),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 6, bottom: 10),
+                    height: constraints.maxHeight * 0.06,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Text(
-                    'Qual a nota você daria após experiência com o projeto (0 - 10)?'),
-                Container(
-                  width: constraints.maxWidth * 0.8,
-                  height: constraints.maxHeight * 0.05,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
+                  Text(
+                    'Qual a nota você daria após experiência com o projeto (0 - 10)?',
+                    style: TextStyle(fontSize: constraints.maxWidth * 0.05),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 6, bottom: 10),
+                    height: constraints.maxHeight * 0.06,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Text(
-                    'Descreva até o momento qual é a sua experiência com o Projeto Estímulo 2020:'),
-                TextField(
-                  maxLines: 10,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                  Text(
+                    'Descreva até o momento qual é a sua experiência com o Projeto Estímulo 2020:',
+                    style: TextStyle(fontSize: constraints.maxWidth * 0.05),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 6, bottom: 10),
+                    child: TextField(
+                      maxLines: 10,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                FloatingActionButton(onPressed: null)
-              ],
+                  Container(
+                    width: double.infinity,
+                    child: RaisedButton(onPressed: null),
+                  )
+                ],
+              ),
             ),
           );
         },

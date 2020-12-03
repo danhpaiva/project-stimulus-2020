@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-class MentoriaEspecifica extends StatefulWidget {
+class MentoriaEspecificaPage01 extends StatefulWidget {
   @override
-  _MentoriaEspecificaState createState() => _MentoriaEspecificaState();
+  _MentoriaEspecificaPage01State createState() =>
+      _MentoriaEspecificaPage01State();
 }
 
-class _MentoriaEspecificaState extends State<MentoriaEspecifica> {
+class _MentoriaEspecificaPage01State extends State<MentoriaEspecificaPage01> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
