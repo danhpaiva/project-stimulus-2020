@@ -91,7 +91,9 @@ class _MenuPageState extends State<MenuPage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => AcompanhamentoNegocio(),
+                                  builder: (context) => AcompanhamentoNegocio(
+                                    ultimoQuestionarioFeito: 0,
+                                  ),
                                 ),
                               );
                             },

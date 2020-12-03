@@ -130,8 +130,9 @@ class _YoutubePageVideosState extends State<YoutubePageVideos> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      AcompanhamentoNegocio()));
+                                  builder: (context) => AcompanhamentoNegocio(
+                                        ultimoQuestionarioFeito: 0,
+                                      )));
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width * 0.42,
