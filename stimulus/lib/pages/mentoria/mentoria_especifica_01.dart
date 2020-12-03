@@ -13,11 +13,12 @@ class _MentoriaEspecificaPage01State extends State<MentoriaEspecificaPage01> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Mapeamento'),
+        backgroundColor: Color(0xFF011526),
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {
           return Container(
-            margin: EdgeInsets.only(top: 20),
+            margin: EdgeInsets.only(top: 40),
             child: Column(children: [
               Container(
                 //constraints.maxWidth * .8,
