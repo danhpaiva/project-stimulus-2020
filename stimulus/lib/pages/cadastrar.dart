@@ -1,8 +1,11 @@
+import 'dart:convert';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:stimulus/services/cadastro_user.dart';
 import 'entrar.dart';
 import 'menu_principal.dart';
+
+import 'package:flutter/cupertino.dart';
+import 'package:http/http.dart' as http;
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -16,51 +19,54 @@ class _SignUpPageState extends State<SignUpPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          return Column(
+    var constraints = MediaQuery.of(context).size;
+    return Scaffold(
+      body: ListView(
+        children: [
+          Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
                 margin: EdgeInsets.only(top: 20, bottom: 20),
                 child: Image.asset(
                   'assets/logo-2.png',
-                  width: constraints.maxWidth * 0.4,
+                  width: constraints.width * 0.4,
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(left: 25, right: 25),
+                padding: EdgeInsets.only(
+                    left: 25, right: 25, bottom: constraints.height * 0.03),
                 child: Column(
                   children: [
                     Text(
                       'Parabéns',
                       style: TextStyle(
-                          fontSize: constraints.maxWidth * 0.08,
+                          fontSize: constraints.width * 0.08,
                           fontWeight: FontWeight.w500),
                       textAlign: TextAlign.center,
                     ),
                     Text(
                       'Faça seu cadastro e encontre as oportunidades que você precisa para crescer!',
-                      style: TextStyle(fontSize: constraints.maxWidth * 0.05),
+                      style: TextStyle(fontSize: constraints.width * 0.05),
                       textAlign: TextAlign.center,
                     ),
                   ],
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(bottom: constraints.height * 0.02),
                 child: Column(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(
-                          bottom: constraints.maxHeight * 0.012),
+                      margin:
+                          EdgeInsets.only(bottom: constraints.height * 0.012),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
                         color: Color(0XFFd3d3d3),
                       ),
-                      width: constraints.maxWidth * 0.85,
+                      width: constraints.width * 0.85,
                       child: TextField(
                         controller: nomeEmpresa,
                         decoration: InputDecoration(
@@ -69,20 +75,20 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                           labelText: 'Digite o nome da sua empresa',
                           labelStyle:
-                              TextStyle(fontSize: constraints.maxWidth * 0.05),
+                              TextStyle(fontSize: constraints.width * 0.05),
                         ),
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(
-                          bottom: constraints.maxHeight * 0.012),
+                      margin:
+                          EdgeInsets.only(bottom: constraints.height * 0.012),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
                         color: Color(0XFFd3d3d3),
                       ),
-                      width: constraints.maxWidth * 0.85,
+                      width: constraints.width * 0.85,
                       child: TextField(
                         controller: emailCadastro,
                         decoration: InputDecoration(
@@ -91,7 +97,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                           labelText: 'Digite seu email',
                           labelStyle:
-                              TextStyle(fontSize: constraints.maxWidth * 0.05),
+                              TextStyle(fontSize: constraints.width * 0.05),
                         ),
                       ),
                     ),
@@ -102,7 +108,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         color: Color(0XFFd3d3d3),
                       ),
-                      width: constraints.maxWidth * 0.85,
+                      width: constraints.width * 0.85,
                       child: TextField(
                         obscureText: true,
                         controller: senhaCadastro,
@@ -112,7 +118,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                           labelText: 'Digite uma senha',
                           labelStyle:
-                              TextStyle(fontSize: constraints.maxWidth * 0.05),
+                              TextStyle(fontSize: constraints.width * 0.05),
                         ),
                       ),
                     ),
@@ -120,8 +126,9 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
               ),
               Container(
-                width: constraints.maxWidth * .4,
-                height: constraints.maxHeight * .065,
+                width: constraints.width * .4,
+                height: constraints.height * .065,
+                margin: EdgeInsets.only(bottom: constraints.height * 0.08),
                 child: RaisedButton(
                   shape: new RoundedRectangleBorder(
                     side: BorderSide(
@@ -131,21 +138,28 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
                     borderRadius: new BorderRadius.circular(9.0),
                   ),
-                  onPressed: () {
-                    CadastrarUsuario.cadast(nomeEmpresa.text,
-                        emailCadastro.text, senhaCadastro.text, context);
+                  onPressed: () async {
+                    var userCadastrado = await cadastroUsuario(nomeEmpresa.text,
+                        emailCadastro.text, senhaCadastro.text);
+
+                    nomeEmpresa.text = '';
+                    emailCadastro.text = '';
+                    senhaCadastro.text = '';
+
+                    showAlertDialog(context, userCadastrado);
                   },
                   child: Text(
                     'CADASTRAR',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: constraints.maxWidth * 0.047,
+                      fontSize: constraints.width * 0.047,
                     ),
                   ),
                   color: Color(0xFF011526),
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(right: constraints.width * 0.025),
                 alignment: Alignment.bottomRight,
                 child: FlatButton(
                   onPressed: () {
@@ -159,16 +173,85 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: Text(
                     'ENTRAR',
                     style: TextStyle(
-                      fontSize: constraints.maxWidth * 0.047,
+                      fontSize: constraints.width * 0.047,
                       color: Color(0xFF011526),
                     ),
                   ),
                 ),
               )
             ],
-          );
-        },
+          ),
+        ],
       ),
     );
   }
+}
+
+Future<String> cadastroUsuario(nomeEmpresa, email, senha) async {
+  String nome;
+  var response = await http.post(
+      "https://api-project-stimulus-2020.herokuapp.com/api/cadastrar/$nomeEmpresa/$email/$senha");
+  var dados = jsonDecode(response.body);
+
+  if (dados['message'] == 'success') {
+    debugPrint(dados['nomeEmpresa'].toString());
+    nome = dados['nomeEmpresa'].toString();
+    return nome;
+  }
+
+  if (dados['existeUsuario'] == true) {
+    return 'Existe usuário';
+  }
+}
+
+showAlertDialog(BuildContext context, String nomeUser) {
+  Widget okButton = FlatButton(
+    child: Text("OK"),
+    onPressed: () {
+      if (nomeUser == 'Existe usuário') {
+        Navigator.pop(context);
+      } else if (nomeUser != null) {
+        Navigator.pop(context);
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => MenuPage()));
+      } else {
+        Navigator.pop(context);
+      }
+    },
+  );
+
+  AlertDialog alerta;
+  if (nomeUser == 'Existe usuário') {
+    alerta = AlertDialog(
+      title: Text("Já existe um usuário com esse nome ou email"),
+      content: Text("Por favor, insira novos dados"),
+      actions: [
+        okButton,
+      ],
+    );
+  } else if (nomeUser != null) {
+    alerta = AlertDialog(
+      title: Text("Bem vindo: \n$nomeUser"),
+      content: Text("Sua empresa foi cadastrada com sucesso"),
+      actions: [
+        okButton,
+      ],
+    );
+  } else {
+    alerta = AlertDialog(
+      title: Text("Usuário ou senha incorretos"),
+      content: Text("Por favor, tente novamente"),
+      actions: [
+        okButton,
+      ],
+    );
+  }
+
+  // exibe o dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alerta;
+    },
+  );
 }

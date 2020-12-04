@@ -5,12 +5,19 @@ import 'package:stimulus/pages/mentoria/mentoria_especifica_01.dart';
 import 'package:stimulus/pages/trilha/trilha.dart';
 import '../components/menu/cards_menu_principal.dart';
 
+import '../components/models/card_mentores_model.dart';
+
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
 class MenuPage extends StatefulWidget {
   @override
   _MenuPageState createState() => _MenuPageState();
 }
 
 class _MenuPageState extends State<MenuPage> {
+  final Future<ModelCardMentores> mentores = fetchPost();
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -115,5 +122,16 @@ class _MenuPageState extends State<MenuPage> {
         },
       ),
     );
+  }
+}
+
+Future<ModelCardMentores> fetchPost() async {
+  final response = await http.post(
+      "https://api-project-stimulus-2020.herokuapp.com/api/buscar/mentores");
+
+  if (response.statusCode == 200) {
+    return ModelCardMentores.fromJson(json.decode(response.body));
+  } else {
+    throw Exception('Falha ao carregar um post');
   }
 }

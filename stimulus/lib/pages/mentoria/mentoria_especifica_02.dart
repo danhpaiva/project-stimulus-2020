@@ -7,7 +7,14 @@ class MentoriaEspecificaPage02 extends StatefulWidget {
       _MentoriaEspecificaPage02State();
 }
 
+List<String> negocioFamiliar = [
+  'Sim',
+  'Não',
+];
+
 class _MentoriaEspecificaPage02State extends State<MentoriaEspecificaPage02> {
+  String atualNegocioFamiliar = negocioFamiliar[0];
+
   @override
   Widget build(BuildContext context) {
     var constraints = MediaQuery.of(context).size;
@@ -23,7 +30,7 @@ class _MentoriaEspecificaPage02State extends State<MentoriaEspecificaPage02> {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: ListView(
+      body: Column(
         children: [
           Container(
             margin: EdgeInsets.only(top: 10),
@@ -39,28 +46,27 @@ class _MentoriaEspecificaPage02State extends State<MentoriaEspecificaPage02> {
             child: Column(
               children: [
                 Container(
-                  //constraints.width * .8,
-                  margin: EdgeInsets.only(left: 20),
-                  width: constraints.width * .9,
+                  margin: EdgeInsets.only(top: 12),
+                  width: 300,
                   child: Column(
                     children: [
                       Container(
-                        width: constraints.width * .9,
+                        width: 300,
                         child: Text(
-                          'Endereço: *',
-                          style: TextStyle(
-                              color: Color(0xFF011526),
-                              fontSize: constraints.height * 0.022),
+                          'Endereço Comercial: *: *',
+                          style:
+                              TextStyle(color: Color(0xFF011526), fontSize: 16),
                         ),
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 8),
-                        padding: EdgeInsets.only(left: 8, right: 8, bottom: 1),
+                        padding: EdgeInsets.only(
+                            top: 1, left: 6, right: 6, bottom: 2),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                           color: Colors.grey[200],
                         ),
-                        height: constraints.height * 0.07,
+                        height: 42,
                         child: TextField(
                           decoration:
                               InputDecoration(labelText: 'Sua resposta'),
@@ -70,28 +76,28 @@ class _MentoriaEspecificaPage02State extends State<MentoriaEspecificaPage02> {
                   ),
                 ),
                 Container(
-                  //constraints.width * .8,
-                  margin: EdgeInsets.only(top: 12, left: 20),
-                  width: constraints.width * .9,
+                  //constraints.maxWidth * .8,
+                  margin: EdgeInsets.only(top: 12),
+                  width: 300,
                   child: Column(
                     children: [
                       Container(
-                        width: constraints.width * .9,
+                        width: 300,
                         child: Text(
-                          'Telefone: *',
-                          style: TextStyle(
-                              color: Color(0xFF011526),
-                              fontSize: constraints.height * 0.022),
+                          'Município: *',
+                          style:
+                              TextStyle(color: Color(0xFF011526), fontSize: 16),
                         ),
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 8),
-                        padding: EdgeInsets.only(left: 6, right: 6, bottom: 1),
+                        padding: EdgeInsets.only(
+                            top: 1, left: 6, right: 6, bottom: 2),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                           color: Colors.grey[200],
                         ),
-                        height: constraints.height * 0.07,
+                        height: 42,
                         child: TextField(
                           decoration:
                               InputDecoration(labelText: 'Sua resposta'),
@@ -101,28 +107,28 @@ class _MentoriaEspecificaPage02State extends State<MentoriaEspecificaPage02> {
                   ),
                 ),
                 Container(
-                  //constraints.width * .8,
-                  margin: EdgeInsets.only(top: 12, left: 20),
-                  width: constraints.width * .9,
+                  //constraints.maxWidth * .8,
+                  margin: EdgeInsets.only(top: 12),
+                  width: 300,
                   child: Column(
                     children: [
                       Container(
-                        width: constraints.width * .9,
+                        width: 300,
                         child: Text(
-                          'Razão Social: *',
-                          style: TextStyle(
-                              color: Color(0xFF011526),
-                              fontSize: constraints.height * 0.022),
+                          'Estado: *',
+                          style:
+                              TextStyle(color: Color(0xFF011526), fontSize: 16),
                         ),
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 8),
-                        padding: EdgeInsets.only(left: 8, right: 8, bottom: 1),
+                        padding: EdgeInsets.only(
+                            top: 1, left: 6, right: 6, bottom: 2),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                           color: Colors.grey[200],
                         ),
-                        height: constraints.height * 0.07,
+                        height: 42,
                         child: TextField(
                           decoration:
                               InputDecoration(labelText: 'Sua resposta'),
@@ -132,59 +138,28 @@ class _MentoriaEspecificaPage02State extends State<MentoriaEspecificaPage02> {
                   ),
                 ),
                 Container(
-                  //constraints.width * .8,
-                  margin: EdgeInsets.only(top: 12, left: 20),
-                  width: constraints.width * .9,
+                  //constraints.maxWidth * .8,
+                  margin: EdgeInsets.only(top: 12),
+                  width: 300,
                   child: Column(
                     children: [
                       Container(
-                        width: constraints.width * .9,
+                        width: 300,
                         child: Text(
-                          'CNPJ: *',
-                          style: TextStyle(
-                              color: Color(0xFF011526),
-                              fontSize: constraints.height * 0.022),
+                          'Telefone Comercial: *',
+                          style:
+                              TextStyle(color: Color(0xFF011526), fontSize: 16),
                         ),
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 8),
-                        padding: EdgeInsets.only(left: 8, right: 8, bottom: 1),
+                        padding: EdgeInsets.only(
+                            top: 1, left: 6, right: 6, bottom: 2),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                           color: Colors.grey[200],
                         ),
-                        height: constraints.height * 0.07,
-                        child: TextField(
-                          decoration:
-                              InputDecoration(labelText: 'Sua resposta'),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  //constraints.width * .8,
-                  margin: EdgeInsets.only(top: 12, left: 20),
-                  width: constraints.width * .9,
-                  child: Column(
-                    children: [
-                      Container(
-                        width: constraints.width * .9,
-                        child: Text(
-                          'Idade da empresa: *:',
-                          style: TextStyle(
-                              color: Color(0xFF011526),
-                              fontSize: constraints.height * 0.022),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(top: 8),
-                        padding: EdgeInsets.only(left: 8, right: 8, bottom: 1),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(8)),
-                          color: Colors.grey[200],
-                        ),
-                        height: constraints.height * 0.07,
+                        height: 42,
                         child: TextField(
                           decoration:
                               InputDecoration(labelText: 'Sua resposta'),
