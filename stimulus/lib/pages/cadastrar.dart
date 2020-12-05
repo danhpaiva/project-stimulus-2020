@@ -146,7 +146,8 @@ class _SignUpPageState extends State<SignUpPage> {
                     emailCadastro.text = '';
                     senhaCadastro.text = '';
 
-                    showAlertDialog(context, userCadastrado);
+                    showAlertDialog(
+                        context, userCadastrado, emailCadastro.text);
                   },
                   child: Text(
                     'CADASTRAR',
@@ -204,7 +205,7 @@ Future<String> cadastroUsuario(nomeEmpresa, email, senha) async {
   }
 }
 
-showAlertDialog(BuildContext context, String nomeUser) {
+showAlertDialog(BuildContext context, String nomeUser, String emailCadastro) {
   Widget okButton = FlatButton(
     child: Text("OK"),
     onPressed: () {
@@ -213,7 +214,11 @@ showAlertDialog(BuildContext context, String nomeUser) {
       } else if (nomeUser != null) {
         Navigator.pop(context);
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => MenuPage()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => MenuPage(
+                      email: emailCadastro,
+                    )));
       } else {
         Navigator.pop(context);
       }

@@ -1,13 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:stimulus/pages/mentoria/mentoria_especifica_02.dart';
 
+import 'dart:convert';
+import 'package:flutter/cupertino.dart';
+import 'package:http/http.dart' as http;
+
 class MentoriaEspecificaPage01 extends StatefulWidget {
+  final String email;
+
+  MentoriaEspecificaPage01({Key key, @required this.email}) : super(key: key);
+
   @override
   _MentoriaEspecificaPage01State createState() =>
-      _MentoriaEspecificaPage01State();
+      _MentoriaEspecificaPage01State(email);
 }
 
 class _MentoriaEspecificaPage01State extends State<MentoriaEspecificaPage01> {
+  String _email;
+
+  _MentoriaEspecificaPage01State(String email) {
+    this._email = email;
+  }
+
+  TextEditingController _endereco = TextEditingController();
+  TextEditingController _telefone = TextEditingController();
+
+  TextEditingController _razaoSocial = TextEditingController();
+  TextEditingController _cnpj = TextEditingController();
+  TextEditingController _idadeEmpresa = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     var constraints = MediaQuery.of(context).size;
@@ -61,6 +82,7 @@ class _MentoriaEspecificaPage01State extends State<MentoriaEspecificaPage01> {
                         ),
                         height: constraints.height * 0.07,
                         child: TextField(
+                          controller: _endereco,
                           decoration:
                               InputDecoration(labelText: 'Sua resposta'),
                         ),
@@ -92,6 +114,7 @@ class _MentoriaEspecificaPage01State extends State<MentoriaEspecificaPage01> {
                         ),
                         height: constraints.height * 0.07,
                         child: TextField(
+                          controller: _telefone,
                           decoration:
                               InputDecoration(labelText: 'Sua resposta'),
                         ),
@@ -123,6 +146,7 @@ class _MentoriaEspecificaPage01State extends State<MentoriaEspecificaPage01> {
                         ),
                         height: constraints.height * 0.07,
                         child: TextField(
+                          controller: _razaoSocial,
                           decoration:
                               InputDecoration(labelText: 'Sua resposta'),
                         ),
@@ -154,6 +178,7 @@ class _MentoriaEspecificaPage01State extends State<MentoriaEspecificaPage01> {
                         ),
                         height: constraints.height * 0.07,
                         child: TextField(
+                          controller: _cnpj,
                           decoration:
                               InputDecoration(labelText: 'Sua resposta'),
                         ),
@@ -185,6 +210,7 @@ class _MentoriaEspecificaPage01State extends State<MentoriaEspecificaPage01> {
                         ),
                         height: constraints.height * 0.07,
                         child: TextField(
+                          controller: _idadeEmpresa,
                           decoration:
                               InputDecoration(labelText: 'Sua resposta'),
                         ),
@@ -205,7 +231,9 @@ class _MentoriaEspecificaPage01State extends State<MentoriaEspecificaPage01> {
                       ),
                       borderRadius: new BorderRadius.circular(9.0),
                     ),
-                    onPressed: () {
+                    onPressed: () async {
+                      enviarDadosPage01(_email, _endereco, _telefone,
+                          _razaoSocial, _cnpj, _idadeEmpresa);
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -228,4 +256,20 @@ class _MentoriaEspecificaPage01State extends State<MentoriaEspecificaPage01> {
           ],
         ));
   }
+}
+
+Future<String> enviarDadosPage01(
+    email, endereco, telefone, razaoSocial, cnpj, idadeEmpresa) async {
+  String retornoDados;
+  var response = await http.post(
+      "https://api-project-stimulus-2020.herokuapp.com/api/mapeamento/01/$email/$endereco/$telefone/$razaoSocial/$cnpj/$idadeEmpresa");
+  var dados = jsonDecode(response.body);
+
+  if (dados['message'] == 'success') {
+    debugPrint(dados['user'].toString());
+    debugPrint(dados['coletaFragilidade'].toString());
+    retornoDados = dados['user'].toString();
+    return retornoDados;
+  }
+  return null;
 }

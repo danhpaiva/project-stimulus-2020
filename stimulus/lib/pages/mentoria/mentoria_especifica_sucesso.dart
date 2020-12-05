@@ -81,7 +81,9 @@ class _MentoriaEspecificaSucessoState extends State<MentoriaEspecificaSucesso> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MenuPage(),
+                          builder: (context) => MenuPage(
+                            email: '',
+                          ),
                         ),
                       );
                     },

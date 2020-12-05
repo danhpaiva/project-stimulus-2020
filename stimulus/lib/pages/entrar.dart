@@ -125,7 +125,8 @@ class _LoginPageState extends State<LoginPage> {
                             _emailUser.text,
                             _passwordUser.text,
                           );
-                          showAlertDialog(context, retornoDados);
+                          showAlertDialog(
+                              context, retornoDados, _emailUser.text);
                         },
                         child: Text(
                           'LOGAR',
@@ -183,14 +184,18 @@ Future<String> verificarlogin(email, senha) async {
   return null;
 }
 
-showAlertDialog(BuildContext context, String nomeUser) {
+showAlertDialog(BuildContext context, String nomeUser, String emailUser) {
   Widget okButton = FlatButton(
     child: Text("OK"),
     onPressed: () {
       if (nomeUser != null) {
         Navigator.pop(context);
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => MenuPage()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => MenuPage(
+                      email: emailUser,
+                    )));
       } else {
         Navigator.pop(context);
       }

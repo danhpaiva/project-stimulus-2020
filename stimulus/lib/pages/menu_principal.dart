@@ -11,11 +11,21 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class MenuPage extends StatefulWidget {
+  String email;
+
+  MenuPage({Key key, @required this.email}) : super(key: key);
+
   @override
-  _MenuPageState createState() => _MenuPageState();
+  _MenuPageState createState() => _MenuPageState(email);
 }
 
 class _MenuPageState extends State<MenuPage> {
+  String _email;
+
+  _MenuPageState(email) {
+    this._email = email;
+  }
+
   final Future<ModelCardMentores> mentores = fetchPost();
 
   @override
@@ -81,7 +91,9 @@ class _MenuPageState extends State<MenuPage> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) =>
-                                      MentoriaEspecificaPage01(),
+                                      MentoriaEspecificaPage01(
+                                    email: _email,
+                                  ),
                                 ),
                               );
                             },
