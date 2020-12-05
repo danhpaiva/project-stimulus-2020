@@ -17,12 +17,12 @@
 </p>
 
 <h2 align="center" id=status> 
-	:beginner: Em construção :construction:
+	:star: Concluído :star:
 </h2>
 
 <h2 id=objetivo>:scroll: Objetivo</h2>
 
-Este projeto tem como objetivo construir uma aplicação mobile utilizando Flutter para trabalhar desde lógica de programação, a conexão com banco de dados.<br>
+Este projeto tem como objetivo construir uma aplicação mobile utilizando Flutter para trabalhar desde lógica de programação, a conexão com banco de dados e consumo de dados via API.<br>
 
 <h2 id=instalacao>:clipboard: Instalação</h2>
 
