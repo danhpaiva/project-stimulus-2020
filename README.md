@@ -31,6 +31,8 @@ Trabalhamos com conceitos importantes: lógica de programação, conexão com ba
 2. Abra o seu projeto e se certifique que as bibliotecas foram baixadas através do "pubspec.yaml".
 3. Execute o arquivo "main.dart" dentro da aplicação para debudar o projeto.
 
+Obs.: A API utilizada neste projeto se encontra neste repositório: <a href="https://github.com/danhpaiva/api-project-stimulus-2020">Stimulus - API</a>
+
 <h2 id=tecnologias>:toolbox: Tecnologias</h2>
 
 As seguintes ferramentas foram usadas na construção do projeto:
