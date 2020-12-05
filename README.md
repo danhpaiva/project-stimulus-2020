@@ -23,7 +23,7 @@
 <h2 id=objetivo>:scroll: Objetivo</h2>
 
 Este projeto tem como objetivo construir uma aplicação mobile utilizando Flutter.<br> 
-Trabalhamos com conceitos importantes: lógica de programação, conexão com banco de dados na nuvem,consumo de dados através de uma API.<br>
+Trabalhamos com conceitos importantes: lógica de programação, conexão com banco de dados na nuvem, consumo de dados através de uma API.<br>
 
 <h2 id=instalacao>:clipboard: Instalação</h2>
 
