@@ -22,11 +22,14 @@
 
 <h2 id=objetivo>:scroll: Objetivo</h2>
 
-Este projeto tem como objetivo construir uma aplicação mobile utilizando Flutter para trabalhar desde lógica de programação, a conexão com banco de dados e consumo de dados via API.<br>
+Este projeto tem como objetivo construir uma aplicação mobile utilizando Flutter.<br> 
+Trabalhamos com conceitos importantes: lógica de programação, conexão com banco de dados na nuvem,consumo de dados através de uma API.<br>
 
 <h2 id=instalacao>:clipboard: Instalação</h2>
 
 1. Faça o clone do repositório.
+2. Abra o seu projeto e se certifique que as bibliotecas foram baixadas através do "pubspec.yaml".
+3. Execute o arquivo "main.dart" dentro da aplicação para debudar o projeto.
 
 <h2 id=tecnologias>:toolbox: Tecnologias</h2>
 
@@ -36,6 +39,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Flutter: <a href="https://flutter.dev/docs/get-started/install">v1.22.4</a>
 - Android Studio: <a href="https://developer.android.com/studio?hl=pt-br">Download</a>
 - Canva: <a href="https://www.canva.com/pt_br/">Site Canva</a>
+- Node:  <a href="https://nodejs.org/en/">v14.15.1 LTS</a>
+- MongoDB: <a href="https://www.mongodb.com/">MongoDB</a>
 
 <h2 id=autor>:grin: Autores</h2>
 
