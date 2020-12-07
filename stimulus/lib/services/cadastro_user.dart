@@ -8,7 +8,7 @@ class CadastrarUsuario {
   CadastrarUsuario.cadast(nomeEmpresa, email, senha, context) {
     cadastro(nomeEmpresa, email, senha, context) async {
       var response = await http.post(
-          "http://192.168.0.10:3434/api/cadastrar/$nomeEmpresa/$email/$senha");
+          "http://192.168.1.5:3434/api/cadastrar/$nomeEmpresa/$email/$senha");
       var dados = jsonDecode(response.body);
 
       if (dados['message'] == 'success') {
