@@ -7,6 +7,8 @@ import 'menu_principal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+
 class SignUpPage extends StatefulWidget {
   @override
   _SignUpPageState createState() => _SignUpPageState();
@@ -139,6 +141,8 @@ class _SignUpPageState extends State<SignUpPage> {
                     borderRadius: new BorderRadius.circular(9.0),
                   ),
                   onPressed: () async {
+                    showSpinner(context);
+
                     var userCadastrado = await cadastroUsuario(nomeEmpresa.text,
                         emailCadastro.text, senhaCadastro.text);
 
@@ -257,6 +261,25 @@ showAlertDialog(BuildContext context, String nomeUser, String emailCadastro) {
     context: context,
     builder: (BuildContext context) {
       return alerta;
+    },
+  );
+}
+
+showSpinner(BuildContext context) {
+  SpinKitFadingCircle spin = SpinKitFadingCircle(
+    itemBuilder: (BuildContext context, int index) {
+      return DecoratedBox(
+        decoration: BoxDecoration(
+          color: index.isEven ? Colors.blue : Colors.blue[200],
+        ),
+      );
+    },
+  );
+
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return spin;
     },
   );
 }

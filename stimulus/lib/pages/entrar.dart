@@ -6,6 +6,8 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -121,6 +123,8 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: new BorderRadius.circular(9.0),
                         ),
                         onPressed: () async {
+                          showSpinner(context);
+
                           var retornoDados = await verificarlogin(
                             _emailUser.text,
                             _passwordUser.text,
@@ -226,6 +230,25 @@ showAlertDialog(BuildContext context, String nomeUser, String emailUser) {
     context: context,
     builder: (BuildContext context) {
       return alerta;
+    },
+  );
+}
+
+showSpinner(BuildContext context) {
+  SpinKitFadingCircle spin = SpinKitFadingCircle(
+    itemBuilder: (BuildContext context, int index) {
+      return DecoratedBox(
+        decoration: BoxDecoration(
+          color: index.isEven ? Colors.blue : Colors.blue[200],
+        ),
+      );
+    },
+  );
+
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return spin;
     },
   );
 }
