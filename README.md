@@ -48,10 +48,8 @@ The following technologies were used in the development of the project:
 <h2 id=autor>:grin: Author</h2>
 
 Developed by 
-<a href="https://github.com/agathafranca" target="_blank">Agatha França</a>,
 <a href="https://www.linkedin.com/in/danhpaiva/" target="_blank">Daniel Paiva</a>,
-<a href="https://www.linkedin.com/in/francisco-fontoura/" target="_blank">Francisco Fontoura</a>,
-<a href="https://github.com/gab-gomes" target="_blank">Gabriel Gomes</a> e 
+<a href="https://www.linkedin.com/in/francisco-fontoura/" target="_blank">Francisco Fontoura</a>, e 
 <a href="https://www.linkedin.com/in/guilhermepujoni/" target="_blank">Guilherme Pujoni</a> .
 
 <h2 id=licenca>:lock: Licence</h2>
